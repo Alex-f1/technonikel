@@ -1,0 +1,90 @@
+.top-panel
+  width: 100%
+  top: 0
+  left: 0
+  position: fixed
+  z-index: 50
+
+  &__section
+    max-width: 1920px
+    width: 100%
+    display: flex
+    align-items: center
+    margin: 0 auto
+
+  &__inner
+    max-width: 1770px
+    width: 100%
+    display: flex
+    align-items: center
+    padding-left: 20px
+
+    @media (min-width: 1280px)
+      padding-left: 150px
+
+    @media (min-width: 768px)
+      padding-left: 50px
+
+  &__info
+    margin-left: auto
+
+  &__buttons
+    display: flex
+    align-items: center
+
+  &__button
+    font-size: 12px
+    margin-right: 20px
+    padding-top: 8px
+    padding-bottom: 8px
+
+    &:last-child
+      margin-right: 0
+
+  &__menu
+    margin-left: 50px
+
+  &__button-burger
+    width: 50px
+    height: 50px
+    background-color: #4FA600
+    border: none
+    padding: 0
+    position: relative
+    cursor: pointer
+    display: block
+
+    @media (min-width: 768px)
+      width: 100px
+      height: 100px
+
+    span
+      width: 40px
+      height: 2px
+      background-color: #fff
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      display: block
+
+      @media (min-width: 768px)
+        width: 40px
+
+    &:before, &:after
+      content: ''
+      position: absolute
+      background-color: #fff
+      width: 20px
+      height: 2px
+      left: 50%
+      transform: translateX(-50%)
+
+      @media (min-width: 768px)
+        width: 40px
+
+    &:before
+      top: 40px
+
+    &:after
+      bottom: 40px

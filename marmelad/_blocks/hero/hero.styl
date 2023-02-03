@@ -1,0 +1,155 @@
+.hero
+  height: 100vh
+  max-width: 1920px
+  width: 100%
+  margin: 0 auto
+
+  &__section, &__inner, &__container, &__items, &__item
+    height: 100%
+
+  &__container
+    .swiper-pagination
+      font-weight: 700
+      font-size: 16px
+      line-height: 21px
+      text-align: center
+      letter-spacing: 0.8px
+      width: auto
+      left: 136px
+      top: calc(100% - 600px)
+      bottom: auto
+
+      span
+        span
+          font-weight: 300
+
+  &__body
+    display: flex
+    flex-direction: column
+    max-width: 1770px
+    width: 100%
+    height: 100%
+    padding-left: 20px
+    padding-bottom: 42px
+
+    @media (min-width: 1280px)
+      padding-left: 150px
+      padding-bottom: 200px
+
+    @media (min-width: 768px)
+      padding-left: 50px
+      padding-bottom: 80px
+
+  &__img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+    img
+      width: 100%
+      height: 100%
+      vertical-align: top
+      object-fit: cover
+
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
+      position: absolute
+      top: 0
+      left: 0
+
+  &__content
+    border-left: 1px solid #FFF
+    padding-left: 20px
+    position: relative
+    z-index: 2
+    margin-top: auto
+    max-width: 550px
+
+    @media (min-width: 1280px)
+      padding-left: 46px
+
+    @media (min-width: 768px)
+      padding-left: 30px
+
+  &__name
+    font-size: 16px
+    font-weight: 300
+    line-height: 1
+    margin-bottom: 10px
+
+    @media (min-width: 1280px)
+      font-size: 32px
+      margin-bottom: 10px
+
+    @media (min-width: 768px)
+      font-size: 20px
+
+  &__title
+    font-size: 24px
+    font-weight: 700
+    line-height: 1
+    text-transform: uppercase
+    margin-bottom: 16px
+
+    @media (min-width: 1280px)
+      font-size: 70px
+      margin-bottom: 30px
+
+    @media (min-width: 768px)
+      font-size: 30px
+
+  &__button-more
+    display: inline-block
+    min-width: 160px
+
+  &__container-name
+    max-width: 1470px
+    width: 100%
+    margin: 0 auto
+    margin-top: -50px
+
+  &__item-name
+    font-size: 12px
+    font-weight: 300
+    line-height: 1.2
+    text-align: center
+    flex: 1 1 auto
+    cursor: pointer
+    padding-bottom: 6px
+
+    @media (min-width: 1280px)
+      font-size: 18px
+
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 3px
+      background-color: #fff
+
+    &.swiper-slide-thumb-active
+      &:after
+        background-color: #4FA600
+
+._is-light
+  .hero
+    &__container
+      .swiper-pagination
+        color: #fff
+
+    &__content
+      color: #fff
+
+    &__img
+      &:before
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
+
+    &__item-name
+      color: #fff

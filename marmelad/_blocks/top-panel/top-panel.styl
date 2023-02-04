@@ -13,13 +13,12 @@
     margin: 0 auto
 
   &__inner
-    max-width: 1770px
-    width: 100%
+    flex: 1 1 auto
     display: flex
     align-items: center
     padding-left: 20px
 
-    @media (min-width: 1280px)
+    @media (min-width: 1600px)
       padding-left: 150px
 
     @media (min-width: 768px)
@@ -29,14 +28,37 @@
     margin-left: auto
 
   &__buttons
-    display: flex
-    align-items: center
+    display: none
+
+    @media (min-width: 1280px)
+      display: flex
+      align-items: center
 
   &__button
-    font-size: 12px
+    font-size: 10px
     margin-right: 20px
     padding-top: 8px
     padding-bottom: 8px
+
+    @media (min-width: 1280px)
+      font-size: 12px
+      text-align: center
+      padding: 8px 26px
+      flex: none
+      max-width: none
+      width: auto
+      min-width: 180px
+
+    @media (min-width: 768px)
+      flex: 0 0 120px
+      width: 120px
+      max-width: 120px
+      min-width: auto
+      padding: 9px 10px
+      text-align: left
+
+    svg
+      flex: 0 0 auto
 
     &:last-child
       margin-right: 0
@@ -54,13 +76,13 @@
     cursor: pointer
     display: block
 
-    @media (min-width: 768px)
+    @media (min-width: 1280px)
       width: 100px
       height: 100px
 
     span
-      width: 40px
-      height: 2px
+      width: 20px
+      height: 1px
       background-color: #fff
       position: absolute
       top: 50%
@@ -68,23 +90,31 @@
       transform: translate(-50%, -50%)
       display: block
 
-      @media (min-width: 768px)
+      @media (min-width: 1280px)
         width: 40px
+        height: 2px
 
     &:before, &:after
       content: ''
       position: absolute
       background-color: #fff
       width: 20px
-      height: 2px
+      height: 1px
       left: 50%
       transform: translateX(-50%)
 
-      @media (min-width: 768px)
+      @media (min-width: 1280px)
+        height: 2px
         width: 40px
 
     &:before
-      top: 40px
+      top: 30px
+
+      @media (min-width: 1280px)
+        top: 40px
 
     &:after
-      bottom: 40px
+      bottom: 30px
+
+      @media (min-width: 1280px)
+        bottom: 40px

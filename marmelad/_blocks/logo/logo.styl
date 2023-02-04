@@ -1,6 +1,37 @@
 .logo
   &__img
     display: block
+    width: 100%
+    max-width: 136px
+    
+    @media (min-width: 1280px)
+      max-width: 200px
 
     img
       vertical-align: top
+
+      &.logo-light
+        display: block
+
+      &.logo-dark
+        display: none
+
+._is-light
+  .logo
+    img
+      &.logo-dark
+        display: block
+
+    img
+      &.logo-light
+        display: none
+
+._is-dark, ._is-theme
+  .logo
+    img
+      &.logo-light
+        display: block
+
+    img
+      &.logo-dark
+        display: none

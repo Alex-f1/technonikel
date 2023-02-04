@@ -1,13 +1,70 @@
 .hero
-  height: 100vh
+  height: 300px
   max-width: 1920px
   width: 100%
   margin: 0 auto
+
+  @media (min-height: 360px) and (min-width: 320px)
+    height: 100vh
+
+  @media (max-height: 640px) and (min-width: 320px)
+    height: 640px
 
   &__section, &__inner, &__container, &__items, &__item
     height: 100%
 
   &__container
+    .swiper-button-prev, .swiper-button-next
+      width: 60px
+      height: 60px
+      border-radius: 50%
+      transition: background-color 0.3s
+      left: 20px
+
+      @media (min-width: 1600px)
+        left: 122px
+
+      @media (max-width: 1279px)
+        display: none
+
+      &:after
+        content: ''
+        width: 32px
+        height: 18px
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: 0 0
+        transition: background 0.3s
+
+      &:hover
+        background-color: #fff
+
+    .swiper-button-prev
+      top: calc(100% - 410px)
+
+      @media (min-height: 768px)
+        top: calc(100% - 510px)
+
+      &:after
+        transform: rotate(0)
+
+      &:hover
+        &:after
+          background-image: url("data:image/svg+xml,%3Csvg width='37' height='21' viewBox='0 0 37 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 1L18.5 19L0.999999 0.999998' stroke='%234FA600' stroke-width='2'/%3E%3C/svg%3E%0A") !important
+
+    .swiper-button-next
+      top: calc(100% - 530px)
+
+      @media (min-height: 768px)
+        top: calc(100% - 630px)
+
+      &:after
+        transform: rotate(-180deg)
+
+      &:hover
+        &:after
+          background-image: url("data:image/svg+xml,%3Csvg width='37' height='21' viewBox='0 0 37 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 1L18.5 19L0.999999 0.999998' stroke='%234FA600' stroke-width='2'/%3E%3C/svg%3E%0A") !important
+
     .swiper-pagination
       font-weight: 700
       font-size: 16px
@@ -15,13 +72,29 @@
       text-align: center
       letter-spacing: 0.8px
       width: auto
-      left: 136px
-      top: calc(100% - 600px)
+      left: 32px
       bottom: auto
+      top: calc(100% - 474px)
+
+      @media (min-width: 1600px)
+        left: 136px
+
+      @media (min-height: 768px)
+        top: calc(100% - 574px)
+
+      @media (max-width: 1279px)
+        display: none
 
       span
         span
           font-weight: 300
+
+  &__item
+    &.swiper-slide-active
+      & ^[0]
+        &__img
+          img
+            transform: scale(1.1)
 
   &__body
     display: flex
@@ -32,13 +105,24 @@
     padding-left: 20px
     padding-bottom: 42px
 
-    @media (min-width: 1280px)
-      padding-left: 150px
-      padding-bottom: 200px
+    @media (max-height: 768px)
+      padding-bottom: 100px
 
+    @media (min-width: 1600px)
+      padding-left: 150px
+
+    // @media (min-width: 1280px)
+    // padding-left: 80px
+    // padding-bottom: 200px
     @media (min-width: 768px)
       padding-left: 50px
+
+    @media (min-height: 360px) and (min-width: 768px)
+      padding-left: 50px
       padding-bottom: 80px
+
+    @media (min-height: 550px) and (min-width: 768px)
+      padding-bottom: 200px
 
   &__img
     position: absolute
@@ -46,21 +130,25 @@
     left: 0
     width: 100%
     height: 100%
+    overflow: hidden
 
     img
       width: 100%
       height: 100%
       vertical-align: top
       object-fit: cover
+      object-position: 75% 0%
+      transition: trasnsform 10s, ease 10s
 
     &:before
       content: ''
       width: 100%
       height: 100%
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
       position: absolute
       top: 0
       left: 0
+      z-index: 2
 
   &__content
     border-left: 1px solid #FFF
@@ -68,12 +156,14 @@
     position: relative
     z-index: 2
     margin-top: auto
-    max-width: 550px
+    max-width: 270px
 
     @media (min-width: 1280px)
+      max-width: 550px
       padding-left: 46px
 
     @media (min-width: 768px)
+      max-width: 350px
       padding-left: 30px
 
   &__name
@@ -108,48 +198,110 @@
     min-width: 160px
 
   &__container-name
-    max-width: 1470px
     width: 100%
     margin: 0 auto
     margin-top: -50px
+    padding-right: 80px
+    padding-left: 80px
+    display: none
+
+    @media (min-width: 1600px)
+      padding-right: 150px
+      padding-left: 150px
+
+    @media (min-width: 768px)
+      padding-right: 50px
+      padding-left: 50px
+
+    @media (min-height: 360px) and (min-width: 768px)
+      display: block
 
   &__item-name
     font-size: 12px
     font-weight: 300
     line-height: 1.2
     text-align: center
-    flex: 1 1 auto
+    flex: 1 1 100%
     cursor: pointer
     padding-bottom: 6px
+    border-bottom: 3px solid #fff
 
-    @media (min-width: 1280px)
-      font-size: 18px
+    @media (min-width: 1600px)
+      font-size: 16px
+
+    span
+      text-overflow: ellipsis
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      white-space: normal
+      overflow: hidden
+      height: 16px
 
     &:after
       content: ''
       position: absolute
-      bottom: 0
+      bottom: -3px
       left: 0
-      width: 100%
+      width: 0
       height: 3px
-      background-color: #fff
+      background-color: #4FA600
 
     &.swiper-slide-thumb-active
       &:after
+        animation-name: nameProgressBar
+        animation-duration: 5s
+        animation-timing-function: ease-in
+        animation-iteration-count: 1
+        animation-direction: alternate
+        animation-fill-mode: forwards
         background-color: #4FA600
 
-._is-light
+  @keyframes nameProgressBar
+    0%
+      width: 0
+
+    100%
+      width: 100%
+
+._is-dark, ._is-theme
   .hero
     &__container
+      .swiper-button-prev, .swiper-button-next
+        &:after
+          background-image: url("data:image/svg+xml,%3Csvg width='37' height='21' viewBox='0 0 37 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 1L18.5 19L0.999999 0.999998' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
+
       .swiper-pagination
         color: #fff
 
     &__content
+      border-color: #fff
       color: #fff
 
     &__img
       &:before
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
 
     &__item-name
       color: #fff
+
+._is-light
+  .hero
+    &__container
+      .swiper-button-prev, .swiper-button-next
+        &:after
+          background-image: url("data:image/svg+xml,%3Csvg width='37' height='21' viewBox='0 0 37 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 1L18.5 19L0.999999 0.999998' stroke='%23000' stroke-width='2'/%3E%3C/svg%3E%0A")
+
+      .swiper-pagination
+        color: #000
+
+    &__content
+      border-color: #000
+      color: #000
+
+    &__img
+      &:before
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 50%)
+
+    &__item-name
+      color: #000

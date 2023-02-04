@@ -2,8 +2,19 @@
   width: 100%
   top: 0
   left: 0
-  position: fixed
+  position: absolute
   z-index: 50
+  overflow: hidden
+
+  &._is-opened-menu
+    .logo
+      &__img
+        img
+          &.logo-light
+            display: none !important
+
+          &.logo-dark
+            display: block !important
 
   &__section
     max-width: 1920px
@@ -75,6 +86,7 @@
     position: relative
     cursor: pointer
     display: block
+    z-index: 52
 
     @media (min-width: 1280px)
       width: 100px
@@ -89,6 +101,7 @@
       left: 50%
       transform: translate(-50%, -50%)
       display: block
+      transition: margin-left 0.3s, opacity 0.3s, ease 0.3s
 
       @media (min-width: 1280px)
         width: 40px
@@ -102,6 +115,7 @@
       height: 1px
       left: 50%
       transform: translateX(-50%)
+      transition: margin-left 0.3s, opacity 0.3s, ease 0.3s
 
       @media (min-width: 1280px)
         height: 2px
@@ -118,3 +132,28 @@
 
       @media (min-width: 1280px)
         bottom: 40px
+
+    i
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 36px
+      height: 36px
+      transform: translate(-50%, -50%)
+      background-image: url("data:image/svg+xml,%3Csvg width='37' height='36' viewBox='0 0 37 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L36 35' stroke='white' stroke-width='2'/%3E%3Cpath d='M36 1L1 35' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
+      opacity: 0
+      visibility: hidden
+      transition: opacity 0.3s, ease 0.3s
+
+    &._is-active
+      span
+        margin-left: 10px
+        opacity: 0
+
+      &:before, &:after
+        margin-left: -10px
+        opacity: 0
+
+      i
+        opacity: 1
+        visibility: visible

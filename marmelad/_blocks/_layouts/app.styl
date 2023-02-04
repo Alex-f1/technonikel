@@ -5,6 +5,10 @@ html, body
 html, body
   min-height: 100vh
 
+body
+  &._is-scroll-lock
+    overflow: hidden
+
 .app
   display: grid
   grid-template-rows: auto 1fr auto
@@ -40,7 +44,7 @@ html, body
   align-items: center
   justify-content: center
   flex: none
-  // transition: border-color 0.3s, ease 0.3s
 
+  // transition: border-color 0.3s, ease 0.3s
   svg
     margin-right: 8px

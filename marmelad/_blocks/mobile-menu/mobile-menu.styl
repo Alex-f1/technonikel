@@ -1,0 +1,239 @@
+.mobile-menu
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  z-index: 51
+  background-color: #fff
+  padding-top: 50px
+  transform: translateX(100%)
+  opacity: 0
+  visibility: hidden
+  transition: opacity 0.3s, transform 0.3s, ease 0.3s
+
+  &._is-triggered
+    & ^[0]
+      &__head
+        display: block
+
+  &._is-show
+    transform: translateX(0)
+    opacity: 1
+    visibility: visible
+
+  @media (min-width: 768px)
+    display: none
+
+  &__section
+    height: 100%
+
+  &__inner
+    height: 100%
+    display: flex
+    flex-direction: column
+
+  &__head
+    display: flex
+    flex-direction: column
+    flex: 0 0 auto
+    // position absolute
+    // top 0
+    // right 100%
+    display: none
+
+  &__name
+    font-size: 16px
+    color: #000
+    font-weight: 500
+    line-height: 1.2
+    text-align: center
+    letter-spacing: 0.8px
+    text-transform: uppercase
+    padding: 14px 20px 16px 20px
+    text-align: center
+
+  &__back
+    font-size: 16px
+    color: #000
+    font-weight: 500
+    line-height: 1.2
+    letter-spacing: 0.8px
+    text-decoration: none
+    text-align: left
+    padding: 12px 20px
+    border: none
+    background-color: #F1F1F1
+    display: block
+    width: 100%
+    position: relative
+    cursor: pointer
+
+    &:after
+      content: ''
+      width: 10px
+      height: 16px
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 15L2 8L9 1' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A")
+      position: absolute
+      top: 50%
+      left: 20px
+      transform: translateY(-50%)
+
+    span
+      padding-left: 25px
+
+  &__menu
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    position: relative
+
+  &__buttons
+    display: flex
+    background-color: #fff
+    width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 2
+
+  &__button
+    font-size: 10px
+    color: #000
+    font-weight: 300
+    line-height: 1.1
+    text-align: center
+    text-decoration: none
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+    padding: 8px 14px
+    height: 100%
+    transition: background-color 0.3s
+
+    &._is-active
+      background-color: #EFFAE6
+
+    i
+      flex: 0 0 34px
+      width: 34px
+      max-width: 34px
+      margin-bottom: 6px
+      position: relative
+
+      img
+        vertical-align: top
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+    span
+      white-space: nowrap
+
+  &__nav
+    width: 100%
+    height: 100%
+    overflow-y: auto
+    overflow-x: hidden
+
+    ul
+      list-style: none
+      padding-left: 0
+      padding-bottom: 70px
+      margin: 0
+      position: relative
+      z-index: 1
+
+      li
+        a
+          width: 100%
+          text-decoration: none
+
+      &.catalog
+        background-color: #fff
+        width: 100%
+        transition: margin-left 0.3s, ease 0.3s
+
+        &._is-triggered
+          margin-left: -100%
+
+        > li
+          display: flex
+          align-items: center
+          // position: relative
+          height: 100px
+          border-bottom: 1px solid #E2E2E2
+
+          &._is-active
+            > ul
+              display: block
+
+          > a
+            font-size: 16px
+            color: #000
+            font-weight: 500
+            line-height: 1.2
+            letter-spacing: 0.8px
+            text-transform: uppercase
+            display: flex
+            align-items: center
+            flex: 1 1 auto
+            padding: 22px 15px
+
+            i
+              flex: 0 0 68px
+              width: 68px
+              max-width: 68px
+              height: 55px
+              margin-right: 18px
+              display: flex
+              align-items: center
+              justify-content: center
+
+              img
+                vertical-align: top
+
+          .sub-menu-trigger
+            // position: absolute
+            // top: 50%
+            // right: 2px
+            flex: 0 0 22px
+            width: 22px
+            max-width: 22px
+            height: 22px
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 15L8 8L0.999999 1' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A")
+            background-position: 50% 50%
+            background-repeat: no-repeat
+            margin-left: 0
+            position: relative
+            z-index: 2
+            cursor: pointer
+
+          ul
+            width: 100%
+            // height: 100%
+            background-color: #fff
+            z-index: 5
+            // margin-top: 145px
+            margin-right: -100%
+            transition: margin-right 0.3s, ease 0.3s
+            display: none
+            position: absolute
+            top: 0
+            right: 0
+
+            li
+              a
+                font-size: 16px
+                color: #000
+                font-weight: 300
+                line-height: 1.1
+                letter-spacing: 0.8px
+                padding: 20px
+                padding-left: 46px
+                display: block
+                border-bottom: 1px solid #E2E2E2

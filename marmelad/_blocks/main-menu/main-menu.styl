@@ -13,6 +13,9 @@
   visibility: hidden
   transition: opacity 0.3s, transform 0.3s, ease 0.3s
 
+  @media (max-width: 767px)
+    display: none
+
   &._is-show-main-menu
     transform: translateX(-50%)
     opacity: 1
@@ -28,16 +31,19 @@
   &__left
     height: 100%
     flex: 1 1 auto
-    padding-left: 150px
+    padding-left: 50px
     background-color: #fff
     opacity: 0
     visibility: hidden
     transform: translateX(-50px)
     transition: transform 0.3s, opacity 0.3s, ease 0.3s
     position: relative
+    overflow-y: auto
+    padding-top: 50px
 
     @media (min-width: 1600px)
-      padding-top: 176px
+      padding-left: 150px
+      padding-top: 76px
 
     &._is-show-menu-catalog
       opacity: 1
@@ -49,6 +55,7 @@
     height: 100%
     border-left: 2px solid #CACACA
     background-color: #fff
+    overflow-y: auto
 
     @media (min-width: 1600px)
       padding-top: 176px
@@ -56,8 +63,11 @@
   &__links
     display: flex
     flex-direction: column
-    padding-top: 130px
-    padding-bottom: 60px
+    padding-top: 100px
+    padding-bottom: 20px
+
+    @media (min-width: 1600px)
+      padding-top: 130px
 
   &__link
     font-size: 22px
@@ -102,12 +112,20 @@
       vertical-align: top
 
   &__buttons
-    padding: 40px
+    padding: 20px 40px
+
+    @media (min-width: 1600px)
+      padding: 40px
 
     &--catalog
-      position: absolute
-      right: 150px
-      bottom: -15px
+      padding: 50px 0 50px 0
+
+      @media (min-width: 960px)
+        padding-top: 100px
+
+      @media (min-width: 1600px)
+        padding: 225px 100px 0 0
+        margin-left: auto
 
       & ^[0]
         &__button
@@ -122,6 +140,9 @@
     margin-bottom: 30px
     padding: 13px 22px
     justify-content: flex-start
+
+    &:last-child
+      margin-bottom: 0
 
     i
       flex: 0 0 44px
@@ -158,9 +179,19 @@
       flex-wrap: wrap
 
       > li
-        width: 25%
-        margin-bottom: 100px
-        padding-right: 25px
+        width: 100%
+        margin-top: 50px
+        padding-right: 35px
+
+        @media (min-width: 960px)
+          width: 50%
+
+        @media (min-width: 1024px)
+          width: 33.333%
+
+        @media (min-width: 1600px)
+          width: 25%
+          margin-top: 100px
 
         > a
           font-size: 20px
@@ -171,8 +202,16 @@
           flex-direction: column
 
           i
-            margin-bottom: 40px
-            height: 87px
+            margin-bottom: 20px
+            width: 92px
+
+            @media (min-width: 960px)
+              width: auto
+              height: 78px
+
+            @media (min-width: 1600px)
+              margin-bottom: 40px
+              height: 87px
 
             img
               vertical-align: top
@@ -182,6 +221,9 @@
 
           li
             margin-bottom: 15px
+
+            &:last-child
+              margin-bottom: 0
 
             a
               font-size: 18px

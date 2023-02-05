@@ -28,9 +28,11 @@
     display: flex
     align-items: center
     padding-left: 20px
+    padding-top: 10px
 
     @media (min-width: 1600px)
       padding-left: 150px
+      padding-top: 0
 
     @media (min-width: 768px)
       padding-left: 50px
@@ -88,7 +90,7 @@
     display: block
     z-index: 52
 
-    @media (min-width: 1280px)
+    @media (min-width: 1600px)
       width: 100px
       height: 100px
 
@@ -103,7 +105,7 @@
       display: block
       transition: margin-left 0.3s, opacity 0.3s, ease 0.3s
 
-      @media (min-width: 1280px)
+      @media (min-width: 1600px)
         width: 40px
         height: 2px
 
@@ -117,33 +119,40 @@
       transform: translateX(-50%)
       transition: margin-left 0.3s, opacity 0.3s, ease 0.3s
 
-      @media (min-width: 1280px)
+      @media (min-width: 1600px)
         height: 2px
         width: 40px
 
     &:before
       top: 30px
 
-      @media (min-width: 1280px)
+      @media (min-width: 1600px)
         top: 40px
 
     &:after
       bottom: 30px
 
-      @media (min-width: 1280px)
+      @media (min-width: 1600px)
         bottom: 40px
 
     i
       position: absolute
       top: 50%
       left: 50%
-      width: 36px
-      height: 36px
+      width: 24px
+      height: 24px
       transform: translate(-50%, -50%)
       background-image: url("data:image/svg+xml,%3Csvg width='37' height='36' viewBox='0 0 37 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L36 35' stroke='white' stroke-width='2'/%3E%3Cpath d='M36 1L1 35' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
       opacity: 0
       visibility: hidden
       transition: opacity 0.3s, ease 0.3s
+
+      @media (min-width: 1600px)
+        width: 36px
+        height: 36px
 
     &._is-active
       span

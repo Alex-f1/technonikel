@@ -1,6 +1,29 @@
 function initHeroSlider() {
 
-  let heroItemActive = document.querySelector(".js-hero-slider .swiper-slide-active"); 
+  
+  function setColor(dataColorLight, dataColorDark, dataColorTheme) {
+    const hero = document.querySelector('.home');
+    const heroItemActive =
+      document.querySelector(".js-hero-slider .swiper-slide-active");
+
+    if (heroItemActive.getAttribute('data-color') == dataColorLight) {
+      hero.classList.add('_is-light');
+      hero.classList.remove('_is-dark');
+      hero.classList.remove('_is-theme');
+    }
+
+    if (heroItemActive.getAttribute('data-color') == dataColorDark) {
+      hero.classList.add('_is-dark');
+      hero.classList.remove('_is-light');
+      hero.classList.remove('_is-theme');
+    }
+
+    if (heroItemActive.getAttribute('data-color') == dataColorTheme) {
+      hero.classList.add('_is-theme');
+      hero.classList.remove('_is-dark');
+      hero.classList.remove('_is-light');
+    }
+  }
 
   const heroSliderName = new Swiper(".js-hero-name-slider", {
     slidesPerView: "auto",
@@ -34,48 +57,15 @@ function initHeroSlider() {
     },
     on: {
       init: function () {
-        if (document.querySelector(".js-hero-slider .swiper-slide-active").getAttribute('data-color') == 'light') {
-          document.querySelector('.home').classList.add('_is-light');
-          document.querySelector('.home').classList.remove('_is-dark');
-          document.querySelector('.home').classList.remove('_is-theme');
-        }
-
-        if (document.querySelector(".js-hero-slider .swiper-slide-active").getAttribute('data-color') == 'dark') {
-          document.querySelector('.home').classList.add('_is-dark');
-          document.querySelector('.home').classList.remove('_is-light');
-          document.querySelector('.home').classList.remove('_is-theme');
-        }
-
-        if (document.querySelector(".js-hero-slider .swiper-slide-active").getAttribute('data-color') == 'theme') {
-          document.querySelector('.home').classList.add('_is-theme');
-          document.querySelector('.home').classList.remove('_is-dark');
-          document.querySelector('.home').classList.remove('_is-light');
-        }
+        setColor("light", "dark", "theme")
       },
       slideChangeTransitionStart: function () {
-        console.log('swiper initialized');
-        if (document.querySelector(".js-hero-slider .swiper-slide-active").getAttribute('data-color') == 'light') {
-          document.querySelector('.home').classList.add('_is-light');
-          document.querySelector('.home').classList.remove('_is-dark');
-          document.querySelector('.home').classList.remove('_is-theme');
-        }
-
-        if (document.querySelector(".js-hero-slider .swiper-slide-active").getAttribute('data-color') == 'dark') {
-          document.querySelector('.home').classList.add('_is-dark');
-          document.querySelector('.home').classList.remove('_is-light');
-          document.querySelector('.home').classList.remove('_is-theme');
-        }
-
-        if (document.querySelector(".js-hero-slider .swiper-slide-active").getAttribute('data-color') == 'theme') {
-          document.querySelector('.home').classList.add('_is-theme');
-          document.querySelector('.home').classList.remove('_is-dark');
-          document.querySelector('.home').classList.remove('_is-light');
-        }
+        setColor("light", "dark", "theme")
       },
     },
     
   });
-  
+
 }
 
 initHeroSlider();

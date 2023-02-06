@@ -1,0 +1,52 @@
+.video-preview
+  max-width: 1920px
+  width: 100%
+  margin: 0 auto
+
+  &__video
+    width: 100%
+    height: 320px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 0 0
+    position: relative
+
+    @media (min-width: 768px)
+      height: 432px
+
+    @media (min-width: 1280px)
+      height: 720px
+
+    @media (min-width: 1600px)
+      height: 1080px
+
+  &__button-play
+    position: absolute
+    top: 20px
+    left: 20px
+    width: 40px
+    height: 40px
+    padding: 0
+    border: none
+    background-color: transparent
+    cursor: pointer
+    transition: transform 0.3s
+
+    @media (min-width: 768px)
+      top: 26px
+      left: 50px
+      width: 44px
+      height: 44px
+
+    @media (min-width: 1280px)
+      top: 54px
+      left: 98px
+      width: 106px
+      height: 106px
+
+    &:hover
+      transform: scale(1.1)
+
+    svg
+      width: 100%
+      height: 100%

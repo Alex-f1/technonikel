@@ -44,6 +44,7 @@ body
   align-items: center
   justify-content: center
   flex: none
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s
 
   @media (min-width: 1280px)
     font-size: 14px
@@ -55,3 +56,13 @@ body
 
   svg
     margin-right: 8px
+
+  &--outline
+    color: #000
+    border: 1px solid #000000
+    background-color: transparent
+
+    &:hover
+      color: #fff
+      background-color: #4FA600
+      border-color: #4FA600

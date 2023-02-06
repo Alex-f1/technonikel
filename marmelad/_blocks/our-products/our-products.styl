@@ -1,19 +1,34 @@
 .our-products
   padding-top: 35px
-  padding-bottom: 50px
+  padding-bottom: 44px
 
   @media (min-width: 768px)
     padding-top: 32px
-    padding-bottom: 50px
+    padding-bottom: 40px
 
   @media (min-width: 1280px)
     padding-top: 55px
-    padding-bottom: 100px
+    padding-bottom: 80px
+
+  &__section
+    max-width: 1920px
+    width: 100%
+    margin-right: auto
+    margin-left: auto
+    padding-right: 25px
+    padding-left: 25px
 
   &__info
     color: #000
     display: flex
     position: relative
+    margin-bottom: 50px
+
+    @media (min-width: 768px)
+      margin-bottom: 38px
+
+    @media (min-width: 1280px)
+      margin-bottom: 100px
 
   &__title
     font-size: 36px
@@ -87,3 +102,96 @@
       max-width: 612px
       margin-left: 210px
       position: static
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin-left: -20px
+
+  &__item
+    width: 100%
+    padding-left: 20px
+    padding-bottom: 20px
+
+    @media (min-width: 960px)
+      width: 50%
+
+.our-product-card
+  width: 100%
+  height: 400px
+  text-decoration: none
+  display: flex
+
+  @media (min-width: 640px)
+    height: 430px
+
+  @media (min-width: 1280px)
+    height: 600px
+
+  &__body
+    width: 100%
+    height: 100%
+    background-color: #F1F1F1
+    border-radius: 30px
+    overflow: hidden
+    position: relative
+    display: flex
+    flex-direction: column
+
+  &__img
+    width: 100%
+    height: 100%
+    position: absolute
+
+    img
+      width: 100%
+      height: 100%
+      vertical-align: top
+      object-fit: cover
+
+  &__content
+    margin-top: auto
+    padding: 20px 40px
+    position: relative
+    z-index: 2
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+    @media (max-width: 639px)
+      text-align: center
+      align-items: center
+
+    @media (min-width: 640px)
+      padding: 40px
+
+    @media (min-width: 1280px)
+      padding: 80px
+
+  &__name
+    font-size: 24px
+    color: #000
+    font-weight: 700
+    line-height: 1
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 18px
+
+    @media (min-width: 640px)
+      font-size: 30px
+      text-align: left
+      width: 320px
+      margin-bottom: 26px
+
+    @media (min-width: 1280px)
+      font-size: 40px
+      width: 430px
+
+  &__link-more
+    display: inline-block
+
+    &.button-default
+      font-size: 12px
+      min-width: 140px
+      padding-top: 12px
+      padding-bottom: 12px

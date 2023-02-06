@@ -1,2 +1,154 @@
 .footer
-  flex none
+  color: #fff
+  max-width: 1920px
+  width: 100%
+  margin: 0 auto
+  flex: none
+  background-color: #000
+  padding-top: 30px
+  padding-bottom: 16px
+
+  &__info
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    @media (min-width: 1360px)
+      flex-direction: row
+      padding-bottom: 30px
+
+    .logo
+      margin-bottom: 30px
+
+      @media (min-width: 1360px)
+        margin-bottom: 0
+        margin-right: 50px
+
+      &__img
+        max-width: 200px !important
+
+  &__link-projects
+    margin-bottom: 20px
+
+    @media (min-width: 1360px)
+      margin-bottom: 0
+      margin-right: 30px
+
+    &.button-default
+      font-size: 14px
+      line-height: 1.5
+      font-weight: 300
+      text-transform: none
+      min-width: auto
+      width: 100%
+      max-width: 768px
+
+      @media (min-width: 1360px)
+        min-width: 335px
+        max-width: 315px
+        padding-top: 10px
+        padding-bottom: 10px
+
+    &.button-default--outline
+      color: #fff
+      border-color: #fff
+
+  &__contacts
+    display: flex
+    align-items: center
+    flex-direction: column
+    margin-bottom: 38px
+
+    @media (min-width: 1360px)
+      flex-direction: row
+      align-items: flex-end
+      margin-bottom: 0
+      margin-left: 30px
+
+    a
+      font-size: 20px
+      font-weight: 700
+      color: #fff
+      line-height: 1.2
+      text-align: center
+      text-decoration: none
+      letter-spacing: 0.8px
+
+  &__phone
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 20px
+    order: -1
+
+    @media (min-width: 1360px)
+      order: 0
+      align-items: flex-end
+      margin-bottom: 0
+      margin-left: 44px
+
+    small
+      font-size: 13px
+      font-weight: 300
+      line-height: 1.1
+      text-align: center
+      letter-spacing: 0.8px
+      margin-bottom: 5px
+
+  &__copy
+    font-size: 13px
+    font-weight: 300
+    line-height: 1.4
+    text-align: center
+    letter-spacing: 0.8px
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 16px
+    border-top: 1px solid #707070
+
+    @media (min-width: 768px)
+      text-align: left
+      flex-direction: row
+      justify-content: space-between
+
+    span
+      &:last-child
+        margin-top: 25px
+
+        @media (min-width: 768px)
+          margin-left: 150px
+          flex: 0 0 auto
+
+      @media (min-width: 768px)
+        margin-top: 0 !important
+
+      br
+        @media (min-width: 768px)
+          display: none
+
+  .social-links
+    order: 1
+
+    @media (min-width: 1360px)
+      order: 0
+      margin-right: auto
+      margin-left: auto
+      margin-bottom: 0
+      transform: translateX(5px)
+
+.social-links
+  margin-bottom: 40px
+
+  &__items
+    display: flex
+    align-items: center
+
+    a
+      text-decoration: none
+      margin-right: 30px
+      display: flex
+      align-items: center
+
+      &:last-child
+        margin-right: 0

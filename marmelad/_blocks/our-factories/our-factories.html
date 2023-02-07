@@ -7,21 +7,22 @@
       </div>
       <div elem="container">
         <div elem="buttons-tab">
-          <button elem="button-tab" class="button-default button-default--outline _is-active" type="button">
+          <button elem="button-tab" class="button-default button-default--outline _is-active  js-button-tab" type="button">
             ДОК-Тагил
           </button>
-          <button elem="button-tab" class="button-default button-default--outline" type="button">
+          <button elem="button-tab" class="button-default button-default--outline js-button-tab" type="button">
             ЛесСервис
           </button>
-          <button elem="button-tab" class="button-default button-default--outline" type="button">
+          <button elem="button-tab" class="button-default button-default--outline js-button-tab" type="button">
             Премьер-Лес
           </button>
         </div>
         <div elem="map">
           <div elem="img"><img src="img/map-pic.png" alt=""></div>
-          <button elem="icon-location" class="_is-active" style="bottom: 320px; left: 410px;" type="button"></button>
-          <button elem="icon-location" style="bottom: 150px; left: 780px;" type="button"></button>
-          <button elem="icon-location" style="bottom: 230px; left: 850px;" type="button"></button>
+          <i elem="icon-location" class="_is-active-location" style="bottom: 320px; left: 410px;">
+          </i>
+          <i elem="icon-location" style="bottom: 150px; left: 780px;"></i>
+          <i elem="icon-location" style="bottom: 230px; left: 850px;"></i>
         </div>
         <div elem="info">
           <strong>240 000<sup>м³</sup></strong>
@@ -32,7 +33,7 @@
           </small>
         </div>
       </div>
-      <div elem="cards">
+      <div elem="cards" class="js-our-factories-cards _is-show">
         <div block="our-factories-card">
           <div elem="images">
             <div class="swiper js-card-our-factories-slider">
@@ -51,7 +52,7 @@
             </div>
           </div>
           <div elem="content">
-            <button elem="button-close" type="button"></button>
+            <button elem="button-close" class="js-button-close" type="button"></button>
             <div elem="head">
               <h3 elem="name">ДОК-Тагил</h3>
               <p>Деревообрабатывающий комплекс</p>

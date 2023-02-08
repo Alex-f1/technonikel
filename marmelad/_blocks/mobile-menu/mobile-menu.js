@@ -33,7 +33,7 @@ function mobileMenu() {
         event.target.parentNode.classList.add("_is-active");
         element.parentElement.classList.add("_is-triggered");
         element.parentElement.offsetParent.classList.add("_is-triggered");
-        const getText = event.target.parentNode.querySelector("a span").firstChild.nodeValue;
+        const getText = event.target.closest('li').children[0].innerText;
 
         mobileMenuName.innerHTML = getText;
       });

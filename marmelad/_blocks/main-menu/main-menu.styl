@@ -93,10 +93,14 @@
         top: 50%
         left: 15px
         transform: translateY(-50%)
+        transition: transform 0.3s
 
       &._is-active
         border-bottom-color: transparent
         background-color: #EFFAE6
+
+        &:before
+          transform: rotate(180deg) translateY(50%)
 
     &:hover
       border-bottom-color: transparent

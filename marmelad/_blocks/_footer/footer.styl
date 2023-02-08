@@ -19,6 +19,7 @@
 
     .logo
       margin-bottom: 30px
+      z-index: 1 !important
 
       @media (min-width: 1360px)
         margin-bottom: 0
@@ -73,6 +74,10 @@
       text-align: center
       text-decoration: none
       letter-spacing: 0.8px
+      transition: color 0.3s
+
+      &:hover
+        color: #4fa600
 
   &__phone
     display: flex
@@ -152,3 +157,12 @@
 
       &:last-child
         margin-right: 0
+
+      svg
+        path
+          transition: fill 0.3s
+
+      &:hover
+        svg
+          path
+            fill: #4fa600

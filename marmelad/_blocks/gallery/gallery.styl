@@ -161,6 +161,15 @@
         width: calc(100% - 260px)
         margin-right: 0
 
+    &:hover
+      @media (min-width: 1025px)
+
+        & ^[0]
+          &__img
+
+            img
+              transform: scale(1.1)
+
   &__img
     background-color: #F1F1F1
     border-radius: 30px
@@ -176,3 +185,4 @@
       height: 100%
       vertical-align: top
       object-fit: cover
+      transition: transform 1.5s

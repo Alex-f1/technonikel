@@ -8,7 +8,7 @@ function mainMenu(e) {
   const topPanel = document.querySelector(".top-panel");
 
   linkCatalog.addEventListener("click", function (event) {
-    event.target.classList.toggle("_is-active");
+    event.currentTarget.classList.toggle("_is-active");
     menuCatalog.classList.toggle("_is-show-menu-catalog");
   });
 

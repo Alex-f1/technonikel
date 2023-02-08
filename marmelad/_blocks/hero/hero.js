@@ -37,6 +37,7 @@ function initHeroSlider() {
     speed: 800,
     effect: 'fade',
     spaceBetween: 0,
+    loop: true,
     autoplay: {
       delay: 5000,
     },

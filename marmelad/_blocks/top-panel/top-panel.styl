@@ -92,10 +92,15 @@
     cursor: pointer
     display: block
     z-index: 52
+    transition: background-color .3s
 
     @media (min-width: 1600px)
       width: 100px
       height: 100px
+
+    &:hover
+      @media (min-width: 1025px)
+        background-color: #89C900
 
     span
       width: 20px

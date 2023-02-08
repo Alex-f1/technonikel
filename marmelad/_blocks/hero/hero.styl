@@ -169,15 +169,15 @@
   &__name
     font-size: 16px
     font-weight: 300
-    line-height: 1
-    margin-bottom: 10px
-
-    @media (min-width: 1280px)
-      font-size: 32px
-      margin-bottom: 10px
+    line-height: 0.7
+    margin-bottom: 14px
 
     @media (min-width: 768px)
       font-size: 20px
+
+    @media (min-width: 1280px)
+      font-size: 32px
+      margin-bottom: 14px
 
   &__title
     font-size: 24px
@@ -264,6 +264,18 @@
         animation-direction: alternate
         animation-fill-mode: forwards
         background-color: #4FA600
+
+  &__button-more
+    &.button-default
+      font-size: 10px
+      min-width: 120px
+      padding-top: 14px
+      padding-bottom: 14px
+
+      @media (min-width: 1280px)
+        padding-top: 17px
+        padding-bottom: 17px
+        font-size: 14px
 
   @keyframes nameProgressBar
     0%

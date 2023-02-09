@@ -38,8 +38,6 @@ function ourFactoriesInfo() {
   }
 
   buttonClose.addEventListener("click", function (event) {
-    console.log(event);
-    console.log(event.target.offsetParent.offsetParent);
     event.target.offsetParent.offsetParent.classList.remove("_is-show")
   });
   

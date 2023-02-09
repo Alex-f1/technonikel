@@ -42,8 +42,8 @@
     .swiper-button-prev
       top: calc(100% - 410px)
 
-      @media (min-height: 768px)
-        top: calc(100% - 530px)
+      @media (min-height: 769px)
+        top: calc(100% - 570px)
 
       &:after
         transform: rotate(0)
@@ -55,8 +55,8 @@
     .swiper-button-next
       top: calc(100% - 530px)
 
-      @media (min-height: 768px)
-        top: calc(100% - 650px)
+      @media (min-height: 769px)
+        top: calc(100% - 690px)
 
       &:after
         transform: rotate(-180deg)
@@ -79,8 +79,8 @@
       @media (min-width: 1600px)
         left: 136px
 
-      @media (min-height: 768px)
-        top: calc(100% - 592px)
+      @media (min-height: 769px)
+        top: calc(100% - 632px)
 
       @media (max-width: 1279px)
         display: none
@@ -175,6 +175,9 @@
     @media (min-width: 768px)
       font-size: 20px
 
+    @media (min-width: 1280px) and (min-height: 769px)
+      margin-bottom: 40px !important
+
     @media (min-width: 1280px)
       font-size: 32px
       margin-bottom: 14px
@@ -186,12 +189,15 @@
     text-transform: uppercase
     margin-bottom: 16px
 
+    @media (min-width: 768px)
+      font-size: 30px
+
+    @media (min-width: 1280px) and (min-height: 769px)
+      margin-bottom: 40px
+
     @media (min-width: 1280px)
       font-size: 70px
       margin-bottom: 30px
-
-    @media (min-width: 768px)
-      font-size: 30px
 
   &__button-more
     display: inline-block

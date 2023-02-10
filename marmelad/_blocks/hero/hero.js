@@ -30,6 +30,14 @@ function initHeroSlider() {
     spaceBetween: 10,
     watchSlidesProgress: true,
     allowTouchMove: false,
+    breakpoints: {
+      320: {
+        spaceBetween: 4,
+      },
+      768: {
+        spaceBetween: 10,
+      },
+    },
   });
   
   const heroSlider = new Swiper(".js-hero-slider", {

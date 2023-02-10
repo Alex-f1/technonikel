@@ -103,10 +103,10 @@
     width: 100%
     height: 100%
     padding-left: 20px
-    padding-bottom: 42px
+    padding-bottom: 80px
 
     @media (max-height: 768px)
-      padding-bottom: 100px
+      padding-bottom: 80px
 
     @media (min-width: 1600px)
       padding-left: 150px
@@ -137,7 +137,7 @@
       height: 100%
       vertical-align: top
       object-fit: cover
-      object-position: 75% 0%
+      object-position: 65% 0%
       transition: trasnsform 10s, ease 10s
 
     &:before
@@ -207,9 +207,13 @@
     width: 100%
     margin: 0 auto
     margin-top: -50px
-    padding-right: 80px
-    padding-left: 80px
-    display: none
+    padding-right 25px
+    padding-left: 25px
+    // display: none
+
+    @media (min-width: 768px)  
+      padding-right: 80px
+      padding-left: 80px
 
     @media (min-width: 1800px)
       max-width: 1470px
@@ -224,8 +228,12 @@
       padding-right: 50px
       padding-left: 50px
 
-    @media (min-height: 360px) and (min-width: 768px)
-      display: block
+    // @media (min-height: 360px) and (min-width: 768px)
+    //   display: block
+
+    span
+      @media (max-width: 767px)
+        opacity 0  
 
   &__item-name
     font-size: 12px

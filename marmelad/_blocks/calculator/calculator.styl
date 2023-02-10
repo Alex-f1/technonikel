@@ -6,6 +6,10 @@
   background-image: url('../img/bg-pic.png')
   background-size: 610px 610px
   background-position: -290px 315px */
+  max-width: 1920px
+  width 100%
+  margin 0 auto
+  overflow: hidden
 
   &:before
     content: ''
@@ -21,7 +25,7 @@
 
     @media (max-width: 767px)
       display: none
-    
+
     @media (min-width: 1280px)
       bottom: -220px
       left: -420px
@@ -37,9 +41,9 @@
     background-size: auto
     background-position: -590px 415px
 
-  &__inner
+  /* &__inner
     @media (max-width: 767px)
-      padding-right: 0
+      padding-right: 0 */
 
   &__title
     font-size: 36px
@@ -110,49 +114,106 @@
       font-weight: 300
       line-height: 1.1
 
-  &__items
-    display: flex
-    margin-left: -14px
+  &__wrapper
+    max-width: 1626px
+    width: 100%
+    margin 0 auto
 
-    @media (max-width: 767px)
-      overflow-x: auto
-
-    @media (min-width: 1280px)
-      margin-left: -32px
-
-  &__item
-    padding-left: 14px
-
-    @media (max-width: 767px)
-      flex: 0 0 160px + 14px
-      width: 160px + 14px
-      max-width: 160px + 14px
+  &__container
+    // padding-right 33px
+    // padding-left 33px
+    max-width: 1626px
+    width: 100%
+    margin: 0 auto
+    padding-bottom 40px
+    overflow: visible
 
     @media (min-width: 768px)
-      width: 25%
+      padding-bottom: 50px
 
-    @media (min-width: 1280px)
-      padding-left: 32px
+    .swiper-pagination
+      display: flex
+      align-items: center
+
+      @media (min-width: 768px)
+        display: none
+
+      .swiper-pagination-bullet
+        flex: 1 1 auto
+        opacity: 1
+        border-radius: 0
+        height: 10px
+        margin-right: 5px
+        margin-left: 5px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: transparent
+
+        &:before
+          content: ''
+          height: 2px
+          width: 100%
+          background-color: #E2E2E2
+          transition: background-color 0.3s
+
+        &.swiper-pagination-bullet-active
+          &:before
+            background-color: #4fa600
+
+    .swiper-scrollbar
+      bottom: 30px
+
+      @media (max-width: 767px)
+        display: none
+
+  &__items
+    display: flex
+    // margin-left: -14px
+
+    // @media (max-width: 767px)
+    //   overflow-x: auto
+    //   padding-bottom: 40px
+
+    // @media (min-width: 1280px)
+    //   margin-left: -32px
+
+  &__item
+    // padding-left: 14px
+
+    @media (max-width: 767px)
+      /* flex: 0 0 280px + 14px
+      width: 280px + 14px
+      max-width: 280px + 14px */
+      /* flex: 0 0 280px
+      width: 280px
+      max-width: 280px */
+
+    @media (min-width: 768px)
+      width 23.5%
+
+    // @media (min-width: 1280px)
+    //   width: 25%
 
   &__bottom
     display: flex
     flex-direction: column
     align-items: center
-    margin-top: 24px
+    margin-top: 14px
     padding-bottom: 30px
     border-bottom: 1px solid #E2E2E2
 
-    @media (max-width: 767px)
-      padding-right: 25px
+    // @media (max-width: 767px)
+    //   padding-right: 25px
 
     @media (min-width: 768px)
       flex-direction: row
       align-items: flex-end
       justify-content: flex-end
-      margin-top: 30px
+      margin-top: 10px
 
     @media (min-width: 1280px)
-      margin-top: 75px
+      margin-top: 25px
       padding-bottom: 75px
 
   &__current-step
@@ -220,8 +281,11 @@
 
 .calculator-product-card
   display: flex
-  height: 260px
   cursor: pointer
+  height: 400px
+
+  @media (min-width: 768px) and (max-width: 1279px)
+    height: 260px
 
   @media (min-width: 1280px)
     height: 420px
@@ -229,8 +293,9 @@
   &:hover
     & ^[0]
       &__body
-        background-color: #FFF
-        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2)
+        @media (min-width: 1025px)
+          background-color: #FFF
+          box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2)
 
       &__name
         color: #4fa600
@@ -254,6 +319,8 @@
       position: absolute
       top: 20px
       right: 20px
+      width: 30px
+      height: 30px
       background-image: url("data:image/svg+xml,%3Csvg width='61' height='61' viewBox='0 0 61 61' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30.8379' cy='30.8223' r='30' fill='%234FA600'/%3E%3Cpath d='M16.831 30.1045L28.0639 41.3374L46.2347 23.1667' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
       background-repeat: no-repeat
       background-position: 0 0
@@ -273,9 +340,13 @@
     top: 0
     right: 0
 
-    @media (max-width: 1023px)
+    @media (min-width: 480px) and (max-width: 767px)
       right: -25px
       top: 30px
+
+    @media (min-width: 768px) and (max-width: 959px)
+      right: -50px
+      top: 10px
 
     img
       vertical-align: top
@@ -301,14 +372,14 @@
       letter-spacing: 0.8px
 
   &__name
-    font-size: 16px
+    font-size: 20px
     font-weight: 700
     line-height: 1
     text-transform: uppercase
     transition: color 0.3s
 
-    @media (min-width: 1280px)
-      font-size: 20px
+    @media (min-width: 768px)
+      font-size: 16px
 
     br
       @media (min-width: 1280px)

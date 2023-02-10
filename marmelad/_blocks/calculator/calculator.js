@@ -19,6 +19,35 @@ function calculatorProduct() {
       toggleClass(this, '_is-active');
     });
   });
+
+}
+
+function initCalculatorSlider() {
+  const calculatorSlider = new Swiper(".js-calculator-slider", {
+    slidesPerView: "auto",
+    spaceBetween: 33,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: true,
+    },
+    breakpoints: {
+      320: {
+        spaceBetween: 14,
+      },
+      1280: {
+        spaceBetween: 33,
+      },
+    },
+  });
+}
+
+if (document.querySelectorAll(".js-about-tree-slider").length) {
+  initAboutTreeSlider();
+  initCalculatorSlider();
 }
 
 if (document.querySelectorAll(".calculator__item").length) {

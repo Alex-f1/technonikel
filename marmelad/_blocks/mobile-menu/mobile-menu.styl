@@ -56,6 +56,7 @@
     text-transform: uppercase
     padding: 14px 20px 16px 20px
     text-align: center
+    border-top: 1px solid #E2E2E2
 
   &__back
     font-size: 16px
@@ -97,13 +98,14 @@
     display: flex
     background-color: #fff
     width: 100%
+    border-top: 1px solid #E2E2E2
     position: absolute
     bottom: 0
     left: 0
     z-index: 5
 
   &__button
-    font-size: 10px
+    font-size: 12px
     color: #000
     font-weight: 300
     line-height: 1.1
@@ -180,8 +182,7 @@
             font-weight: 300
             line-height: 1.1
             letter-spacing: 0.8px
-            padding: 20px
-            padding-left: 46px
+            padding: 20px 20px 20px 46px
             display: block
             border-bottom: 1px solid #E2E2E2
 
@@ -201,10 +202,14 @@
           align-items: center
           height: 100px
           border-bottom: 1px solid #E2E2E2
-          transition: background-color 0.3s, border-bottom-color 0.3s
+          transition: background-color 0.3s, border-color 0.3s
+
+          &:first-child
+            border-top 1px solid #E2E2E2
 
           &:hover
             background-color: #EFFAE6
+            border-top-color: transparent
             border-bottom-color: transparent
 
           &._is-active
@@ -270,7 +275,6 @@
                 font-weight: 300
                 line-height: 1.1
                 letter-spacing: 0.8px
-                padding: 20px
-                padding-left: 46px
+                padding: 30px 20px 31px 46px
                 display: block
                 border-bottom: 1px solid #E2E2E2

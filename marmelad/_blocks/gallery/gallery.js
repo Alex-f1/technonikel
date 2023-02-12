@@ -1,8 +1,8 @@
-const isotopeGallery = new Isotope(".grid", {
-  itemSelector: '.grid-item',
-});
 
 function initGallerySlider() {
+  const isotopeGallery = new Isotope(".grid", {
+    itemSelector: '.grid-item',
+  });
   const aboutTreeSlider = new Swiper(".js-gallery-slider", {
     slidesPerView: "auto",
     spaceBetween: 25,

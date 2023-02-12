@@ -8,14 +8,11 @@ page:
 		footer: true
 		left: false
 		right: false
-	# Массив хлебных крошек, от главной до текущей страницы
-	# Необходимо прописывать только имена файлов (шаблонов) страниц
-	# Названия и ссылки проставятся автоматически
-	crumbs: !!seq
-	- index
-  - catalog-page
+path: [
+	{"title": Главная},
+]
 body:
-	classes:
+	classes: inner-page
 ---
 
 {% extends 'app.html' %}
@@ -23,5 +20,25 @@ body:
 
 {% block main %}
  
+	<div block="inner-top">
+		<div elem="section">
+			<div elem="inner" class="contain">
+				{% include "bread-crumbs.html" %}
+				<h1>каталог</h1>
+			</div>
+		</div>
+	</div><!-- inner-top -->
+
+	{% include "sorting.html" %}
+
+	{% include "catalog-products.html" %}
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	{% include "calculator.html" %}
 
 {% endblock %}

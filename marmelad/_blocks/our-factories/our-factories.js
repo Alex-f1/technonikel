@@ -43,4 +43,8 @@ function ourFactoriesInfo() {
   
 }
 
-ourFactoriesInfo();
+
+if (document.querySelectorAll(".our-factories").length) {
+  ourFactoriesInfo();
+}
+

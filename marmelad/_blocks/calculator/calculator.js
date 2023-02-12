@@ -45,11 +45,7 @@ function initCalculatorSlider() {
   });
 }
 
-if (document.querySelectorAll(".js-about-tree-slider").length) {
-  initAboutTreeSlider();
-  initCalculatorSlider();
-}
-
-if (document.querySelectorAll(".calculator__item").length) {
+if (document.querySelectorAll(".calculator").length) {
   calculatorProduct();
+  initCalculatorSlider();
 }

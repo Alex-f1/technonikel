@@ -1,4 +1,10 @@
 .info-links
+  @media (min-width: 768px)
+    padding-bottom: 40px
+
+  @media (min-width: 1280px)
+    padding-bottom: 90px
+
   &__section
     padding-top: 50px
     padding-bottom: 50px
@@ -51,6 +57,7 @@
     @media (min-width: 1280px)
       width: 25%
       padding-left: 28px
+      margin-bottom: 0
 
   &__link
     text-decoration: none
@@ -62,11 +69,19 @@
     flex-direction: column
     justify-content: center
     align-items: center
+    transition: background-color 0.3s
 
     &:hover
+      background-color: #4fa600
+
       & ^[0]
         &__name
-          color: #4fa600
+          color: #000
+
+        &__icon
+          svg
+            path
+              stroke: #fff
 
   &__icon
     height: 160px
@@ -74,8 +89,9 @@
     align-items: center
     justify-content: center
 
-    img
-      vertical-align: top
+    svg
+      path
+        transition: stroke 0.3s
 
   &__name
     font-size: 16px

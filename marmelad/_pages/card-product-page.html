@@ -1,0 +1,36 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Товар
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+]
+body:
+	classes: inner-page
+---
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+ 
+	<div block="inner-top">
+		<div elem="section">
+			<div elem="inner" class="contain">
+				{% include "bread-crumbs.html" %}
+				<h1>Товар</h1>
+			</div>
+		</div>
+	</div><!-- inner-top -->
+
+	{% include "info-links.html" %}
+
+	{% include "calculator.html" %}
+
+{% endblock %}

@@ -2,7 +2,7 @@
 # JS-YAML demo
 # https://nodeca.github.io/js-yaml/
 page:
-	title: Товар
+	title: Прямой планкен
 	layout:
 		header: true
 		footer: true
@@ -10,6 +10,7 @@ page:
 		right: false
 path: [
 	{"title": Главная},
+	{"title": Каталог},
 ]
 body:
 	classes: inner-page
@@ -24,13 +25,15 @@ body:
 		<div elem="section">
 			<div elem="inner" class="contain">
 				{% include "bread-crumbs.html" %}
-				<h1>Товар</h1>
+				<h1>прямой планкен</h1>
 			</div>
 		</div>
 	</div><!-- inner-top -->
 
-	{% include "info-links.html" %}
+	{% include "card-product.html" %}
 
 	{% include "calculator.html" %}
+	
+	{% include "about-tree.html" %}
 
 {% endblock %}

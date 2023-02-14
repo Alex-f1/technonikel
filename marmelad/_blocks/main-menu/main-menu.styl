@@ -45,6 +45,10 @@
       padding-left: 150px
       padding-top: 76px
 
+    & ^[0]
+      &__nav
+        position: relative
+
     &._is-show-menu-catalog
       opacity: 1
       visibility: visible
@@ -122,14 +126,19 @@
       padding: 40px
 
     &--catalog
+      width: 276px
       padding: 50px 0 50px 0
 
       @media (min-width: 960px)
-        padding-top: 100px
+        padding: 50px 0 50px 0
 
       @media (min-width: 1600px)
-        padding: 184px 100px 0 0
+        padding: 0 100px 0 0
+        width: auto
         margin-left: auto
+        position: absolute
+        bottom: 48px
+        right: 0
 
       & ^[0]
         &__button

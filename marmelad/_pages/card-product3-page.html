@@ -1,0 +1,387 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: доска пола
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+	{"title": Каталог},
+]
+body:
+	classes: inner-page
+---
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+ 
+	<div block="inner-top">
+		<div elem="section">
+			<div elem="inner" class="contain">
+				{% include "bread-crumbs.html" %}
+				<h1>доска пола</h1>
+			</div>
+		</div>
+	</div><!-- inner-top -->
+
+  <div block="card-product">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        <div elem="container">
+          <i elem="icon"><img src="img/product-thumb-icon2.svg" alt=""></i>
+          <div elem="images" class="spotlight-group">
+            <div elem="img" class="spotlight" data-src="img/card-product-img7.png">
+              <img src="img/card-product-img7.png" alt="">
+            </div>
+            <div elem="img" class="spotlight" data-src="img/card-product-img8.jpg">
+              <img src="img/card-product-img8.jpg" alt="">
+            </div>
+            <div elem="img" class="spotlight" data-src="img/card-product-img9.jpg">
+              <img src="img/card-product-img9.jpg" alt="">
+            </div>
+          </div>
+          <div elem="info">
+            <form elem="form">
+              <div block="sorting">
+                <h4 class="name-parameters">Порода древесины</h4>
+                <div elem="sort-type">
+                  <div elem="labels">
+                    <label elem="label">
+                      <input type="radio" name="product_type">
+                      <div elem="choice">
+                        <span elem="name">Ангарская сосна</span>
+                        <span elem="img"><img src="img/sorting-type-img.png" alt=""></span>
+                      </div>
+                    </label>
+                    <label elem="label">
+                      <input type="radio" name="product_type">
+                      <div elem="choice">
+                        <span elem="name">Сибирская лиственница</span>
+                        <span elem="img"><img src="img/sorting-type-img2.png" alt=""></span>
+                      </div>
+                    </label>
+                    <label elem="label">
+                      <input type="radio" name="product_type" checked>
+                      <div elem="choice">
+                        <span elem="name">Сибирский кедр</span>
+                        <span elem="img"><img src="img/sorting-type-img3.png" alt=""></span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div> <!-- sorting -->
+              <div block="product-variety">
+                <h5 class="name-parameters">Сорт</h5>
+                <div elem="labels">
+                  <label elem="label">
+                    <input type="radio" name="product_variety" checked>
+                    <div elem="choice">
+                      <span elem="name">А</span>
+                    </div>
+                  </label>
+                  <label elem="label">
+                    <input type="radio" name="product_variety">
+                    <div elem="choice">
+                      <span elem="name">B</span>
+                    </div>
+                  </label>
+                  <label elem="label">
+                    <input type="radio" name="product_variety">
+                    <div elem="choice">
+                      <span elem="name">C</span>
+                    </div>
+                  </label>
+                  <label elem="label">
+                    <input type="radio" name="product_variety">
+                    <div elem="choice">
+                      <span elem="name">D</span>
+                    </div>
+                  </label>
+                </div>
+              </div> <!-- product-variety -->
+              <div block="product-cut">
+                <h5 class="name-parameters">Сечение</h5>
+                <div elem="labels">
+                  <label elem="label">
+                    <input type="radio" name="product_cut" checked>
+                    <div elem="choice">
+                      <span elem="name">26x146</span>
+                    </div>
+                  </label>
+                  <label elem="label">
+                    <input type="radio" name="product_cut">
+                    <div elem="choice">
+                      <span elem="name">28x146</span>
+                    </div>
+                  </label>
+                </div>
+              </div> <!-- product-cut -->
+              <div block="product-length">
+                <h5 class="name-parameters">Длина</h5>
+                <div elem="labels">
+                  <label elem="label">
+                    <input type="radio" name="product_length">
+                    <div elem="choice">
+                      <span elem="name">3 м</span>
+                    </div>
+                  </label>
+                </div>
+              </div> <!-- product-length -->
+              <div block="delivery-regions">
+                <h5 class="name-parameters">Регионы поставки</h5>
+                <div elem="select">
+                  <select>
+                    <option value="Москва">Москва</option>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                    <option value="Уфа">Уфа</option>
+                  </select>
+                </div>
+              </div><!-- delivery-regions -->
+              <div block="your-choice">
+                <h5 class="name-parameters">Регионы поставки</h5>
+                <input type="hidden" name="total_parameters" value="Прямой планкен, Ангарская сосна, Сорт А, 14x96x2м">
+                <div elem="text">
+                  Террасная доска, Сибирская лиственница, Сорт А, 14x96x2м
+                </div>
+              </div><!-- your-choice -->
+              <div elem="total-price">
+                <div elem="price"><span>1 300</span>₽/м³</div>
+                <button elem="button-buy" class="button-default" type="submit">Купить</button>
+              </div>
+            </form>
+            <div elem="links">
+              <a elem="link-location" href="#"><span>Точки продаж</span></a>
+              <a elem="link-price-list" href="#"><span>Запросить прайс-лист</span></a>
+            </div>
+            <div elem="desc">
+              <h3>Описание</h3>
+              <p>
+                Доска пола (половая доска) — профильная деталь из древесины для покрытия полов. Представляет собой фрезерованную доску,
+                выполненную из массивной древесины (в отличие от паркетной доски, клеёной из нескольких слоёв) благодаря чему способна
+                выдержать большее число циклёвок. Для фиксирования между собой имеет паз на одной кромке и гребень на другой. На
+                внутренней стороне массивной доски расположена выемка (или ряд выемок), которая позволяет снять напряжение древесины и
+                предотвратить коробление от колебаний температуры и влажности.
+              </p>
+            </div>
+            <div block="scope-product">
+              <h3>Сфера применения</h3>
+              <div elem="items" class="spotlight-group">
+                <div elem="item">
+                  <div elem="img" class="spotlight" data-src="img/scope-product-img.jpg">
+                    <img src="img/scope-product-img.jpg" alt="">
+                  </div>
+                  <div elem="name">Каркасные конструкции</div>
+                </div>
+                <div elem="item">
+                  <div elem="img" class="spotlight" data-src="img/scope-product-img2.jpg">
+                    <img src="img/scope-product-img2.jpg" alt="">
+                  </div>
+                  <div elem="name">Кровельные конструкции</div>
+                </div>
+              </div>
+            </div> <!-- scope-product -->
+            <div block="technical-info">
+              <h3>Техническая информация</h3>
+              <h4>Отклонения</h4>
+              <ul elem="list-options">
+                <li>
+                  <span>По длине:</span> -10/+30 мм<span></span>
+                </li>
+                <li>
+                  <span>По ширине:</span> +/- 1,0 мм<span></span>
+                </li>
+                <li>
+                  <span>Упаковка:</span> 0,5/1 пакет/шт<span></span>
+                </li>
+                <li>
+                  <span>Влажность:</span>
+                  <14% (+/- 2%) <span></span>
+                </li>
+                <li>
+                  <span>По толщине:</span> +/- 1,0 мм<span></span>
+                </li>
+              </ul>
+              <h4>Доска пола</h4>
+              <div elem="info">
+                <ul elem="list-info">
+                  <li>В пачке по 3 шт.</li>
+                  <li>В каждом ряде поддона 6 пачек</li>
+                  <li>5 рядов в высоту</li>
+                  <li>Всего 30 пачек на паллете</li>
+                </ul>
+                <div elem="docs">
+                  <a href="#" download=""><span>Сертификат</span></a>
+                  <a href="#" download=""><span>Инструкция</span></a>
+                  <a href="#" download=""><span>Условия хранения</span></a>
+                  <a href="#" download=""><span>ТУ</span></a>
+                </div>
+              </div>
+            </div><!-- technical-info -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- card-product -->
+
+
+	{% include "other-products.html" %}
+
+	{% include "calculator.html" %}
+
+  <div block="info-product">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        <div elem="container">
+          <div elem="head">
+            <h2 elem="title">ангарская <br> сосна</h2>
+            <div elem="desc">
+              <p>
+                Дерево высотой до 30—40 м и диаметром ствола 80—100 (до 180) см. Крона молодых деревьев пирамидальная, позже становится
+                овально-округлой. Кора на старых стволах серовато-бурая толстая, с продольными трещинами, глубоко-бороздчатая; на
+                молодых — гладкая, светло-соломенного цвета.
+
+              </p>
+              <p>
+                Лиственница сибирская растёт в хвойных лесах (вместе с сосной обыкновенной, елью сибирской и сибирским кедром, иногда с
+                пихтой сибирской), реже образует чисто лиственничные леса.
+              </p>
+            </div>
+          </div>
+          <div elem="img">
+            <img src="img/info-product-img3.jpg" alt="">
+          </div>
+        </div>
+        <div elem="content">
+          <div elem="pics">
+            <div elem="pic"><img src="img/info-product-pic3.png" alt=""></div>
+            <span elem="bg-pic" style="background-color: #F5C5A0;"></span>
+          </div>
+          <div elem="info">
+            <div elem="text">
+              <div elem="name">структура волокон</div>
+              <p>Хорошо обрабатывается</p>
+              <p>
+                Может находиться во влажной среде длительный промежуток времени и не портиться.
+                
+              </p>
+            </div>
+            <div elem="text">
+              <div elem="name">низкая теплопроводность</div>
+              <p>Высокие показатели энергоэффективности</p>
+            </div>
+            <div elem="text">
+              <div elem="name">Содержание флавоноидов и эфирных масел</div>
+              <p>Повышенные антисептические свойства (устойчивость к био поражениям)</p>
+              <p>Приятный запах</p>
+              <p>Полезен для здоровья (для людей, страдающих аллергией, астмой и другими дыхательными заболеваниями)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- info-product -->
+
+	<div block="video-block">
+		<div elem="section" style="background-image: url(img/poster-pic.png);">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Wjng9L_4cuQ" title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen></iframe>
+		</div>
+	</div><!-- video-block -->
+	
+	<div block="about-tree">
+		<div elem="section">
+			<div elem="inner" class="contain">
+				<div elem="head">
+					<h3>Узнайте больше</h3>
+				</div>
+				<div elem="wrapper">
+					<div elem="container" class="swiper js-about-tree-slider">
+						<div elem="items" class="swiper-wrapper">
+							<div elem="item" class="swiper-slide">
+								<div block="about-tree-card">
+									<div elem="body">
+										<div elem="img"><img src="img/about-tree-card-img.jpg" alt=""></div>
+										<div elem="content">
+											<small>Статья</small>
+											<div elem="name">Разбираемся в сортах древесины</div>
+											<a elem="link-more" class="button-default" href="#">
+												<span>Подробнее</span>
+											</a>
+										</div>
+									</div>
+								</div><!-- about-tree-card -->
+							</div>
+							<div elem="item" class="swiper-slide">
+								<div block="about-tree-card">
+									<div elem="body">
+										<div elem="img"><img src="img/about-tree-card-img2.jpg" alt=""></div>
+										<div elem="content">
+											<small>Статья</small>
+											<div elem="name">Как подобрать древесину для строительства</div>
+											<a elem="link-more" class="button-default" href="#">
+												<span>Подробнее</span>
+											</a>
+										</div>
+									</div>
+								</div><!-- about-tree-card -->
+							</div>
+							<div elem="item" class="swiper-slide">
+								<div block="about-tree-card">
+									<div elem="body">
+										<div elem="img"><img src="img/about-tree-card-img3.jpg" alt=""></div>
+										<div elem="content">
+											<small>Статья</small>
+											<div elem="name">Влияние влажности на древесину</div>
+											<a elem="link-more" class="button-default" href="#">
+												<span>Подробнее</span>
+											</a>
+										</div>
+									</div>
+								</div><!-- about-tree-card -->
+							</div>
+							<div elem="item" class="swiper-slide">
+								<div block="about-tree-card">
+									<div elem="body">
+										<div elem="img"><img src="img/about-tree-card-img4.jpg" alt=""></div>
+										<div elem="content">
+											<small>Статья</small>
+											<div elem="name">Виды отделки современных фасадов</div>
+											<a elem="link-more" class="button-default" href="#">
+												<span>Подробнее</span>
+											</a>
+										</div>
+									</div>
+								</div><!-- about-tree-card -->
+							</div>
+							<div elem="item" class="swiper-slide">
+								<div block="about-tree-card">
+									<div elem="body">
+										<div elem="img"><img src="img/about-tree-card-img5.jpg" alt=""></div>
+										<div elem="content">
+											<small>Статья</small>
+											<div elem="name">Свойства хвойных пород древесины</div>
+											<a elem="link-more" class="button-default" href="#">
+												<span>Подробнее</span>
+											</a>
+										</div>
+									</div>
+								</div><!-- about-tree-card -->
+							</div>
+						</div>
+						<div class="swiper-scrollbar"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- about-tree -->
+
+{% endblock %}

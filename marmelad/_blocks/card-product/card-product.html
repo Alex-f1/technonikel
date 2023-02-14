@@ -16,29 +16,31 @@
         </div>
         <div elem="info">
           <form elem="form">
-            <div block="product-sort-type">
+            <div block="sorting">
               <h4 class="name-parameters">Порода древесины</h4>
-              <div elem="labels">
-                <label elem="label">
-                  <input type="radio" name="product_type">
-                  <div elem="choice">
-                    <span elem="name">Ангарская сосна</span>
-                    <span elem="img"><img src="img/sorting-type-img.png" alt=""></span>
-                  </div>
-                </label>
+              <div elem="sort-type">
+                <div elem="labels">
+                  <label elem="label">
+                    <input type="radio" name="product_type">
+                    <div elem="choice">
+                      <span elem="name">Ангарская сосна</span>
+                      <span elem="img"><img src="img/sorting-type-img.png" alt=""></span>
+                    </div>
+                  </label>
+                </div>
               </div>
-            </div> <!-- product-sort-type -->
+            </div> <!-- sorting -->
             <div block="product-variety">
               <h5 class="name-parameters">Сорт</h5>
               <div elem="labels">
                 <label elem="label">
-                  <input type="radio" name="product_variety">
+                  <input type="radio" name="product_variety" checked>
                   <div elem="choice">
                     <span elem="name">А</span>
                   </div>
                 </label>
                 <label elem="label">
-                  <input type="radio" name="product_variety" checked>
+                  <input type="radio" name="product_variety">
                   <div elem="choice">
                     <span elem="name">B</span>
                   </div>
@@ -161,7 +163,7 @@
           </div> <!-- scope-product -->
           <div block="technical-info">
             <h3>Техническая информация</h3>
-            <h5>Отклонения</h5>
+            <h4>Отклонения</h4>
             <ul elem="list-options">
               <li>
                 <span>По длине:</span> -10/+30 мм<span></span>
@@ -179,7 +181,7 @@
                 <span>По толщине:</span> +/- 1,0 мм<span></span>
               </li>
             </ul>
-            <h5>Доска пола</h5>
+            <h4>Доска пола</h4>
             <div elem="info">
               <ul elem="list-info">
                 <li>В пачке по 3 шт.</li>

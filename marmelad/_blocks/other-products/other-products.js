@@ -5,8 +5,8 @@ const otherProductsSlider = new Swiper(".js-other-products-slider", {
   spaceBetween: 35,
   loop: false,
   navigation: {
-    prevEl: ".swiper-button-prev",
-    nextEl: ".swiper-button-next",
+    prevEl: ".other-products .swiper-button-prev",
+    nextEl: ".other-products .swiper-button-next",
   },
   pagination: {
     el: ".swiper-pagination",

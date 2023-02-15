@@ -4,9 +4,30 @@
       <div elem="container">
         <i elem="icon"><img src="img/product-thumb-icon3.svg" alt=""></i>
         <div elem="images" class="spotlight-group">
-          <div elem="img" class="spotlight" data-src="img/card-product-img.png">
-            <img src="img/card-product-img.png" alt="">
+          <div elem="images-slider" class="swiper js-card-product-images-slider">
+            <div elem="image-items" class="swiper-wrapper">
+              <div elem="image-item" class="swiper-slide">
+                <div elem="img" class="spotlight" data-src="img/card-product-img.png">
+                  <img src="img/card-product-img.png" alt="">
+                </div>
+              </div>
+              <div elem="image-item" class="swiper-slide">
+                <div elem="img" class="spotlight" data-src="img/card-product-img2.jpg">
+                  <img src="img/card-product-img2.jpg" alt="">
+                </div>
+              </div>
+              <div elem="image-item" class="swiper-slide">
+                <div elem="img" class="spotlight" data-src="img/card-product-img3.jpg">
+                  <img src="img/card-product-img3.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
+          <!-- <div elem="img" class="spotlight" data-src="img/card-product-img.png">
+            <img src="img/card-product-img.png" alt="">
+          </div> -->
           <div elem="img" class="spotlight" data-src="img/card-product-img2.jpg">
             <img src="img/card-product-img2.jpg" alt="">
           </div>
@@ -21,7 +42,7 @@
               <div elem="sort-type">
                 <div elem="labels">
                   <label elem="label">
-                    <input type="radio" name="product_type">
+                    <input type="radio" name="product_type" checked>
                     <div elem="choice">
                       <span elem="name">Ангарская сосна</span>
                       <span elem="img"><img src="img/sorting-type-img.png" alt=""></span>

@@ -22,6 +22,18 @@ body
       @media (min-width: 768px) and (max-width: 1919px)
         padding-left: 50px
 
+  &.error404
+    .logo
+      .logo-dark
+        display: none !important
+
+      .logo-light
+        display: block !important
+
+    .top-panel
+      &__info
+        display: none
+
 .app
   display: grid
   grid-template-rows: auto 1fr auto

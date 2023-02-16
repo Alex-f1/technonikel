@@ -1,16 +1,6 @@
 .card-product
   .property
-    margin-bottom: 26px
-
-    &__sort-type
-      display: block
-
-    &__label
-      input
-        &:checked ~ .property__choice
-          background-color: #D4F0BA
-          border-color: transparent
-          pointer-events: none
+    
 
     .name-parameters
       font-size: 16px
@@ -352,13 +342,15 @@
     margin-bottom: 8px
 
 .property
-  margin-bottom: 26px
+  margin-bottom: 16px
 
   &__labels
     display: flex
     align-items: center
+    flex-wrap: wrap
 
     &--pic
+      flex-wrap: nowrap
       position: relative
 
       @media (max-width: 1279px)
@@ -371,14 +363,15 @@
       @media (min-width: 1280px)
         display: flex
         width: 550px
-        margin-right: 10px
+        // margin-right: 10px
 
       & ^[0]
-  
         &__label
           width: 33.333%
+          min-width: none
           position: relative
           margin-right: 20px
+          margin-bottom 0
 
           &:last-child
             margin-right: 0 !important
@@ -429,27 +422,6 @@
             justify-content: center
             flex-direction: row
 
-        &__img
-          @media (max-width: 639px)
-            flex: 0 0 72px
-            width: 72px
-            max-width: 72px
-            order: -1
-            margin-right: 35px
-            transform: translateY(-6px)
-
-          @media (max-width: 767px)
-            width: 65px
-
-          @media (min-width: 768px)
-            width: 75px
-
-          @media (min-width: 1280px)
-            width: 107px
-
-          img
-            vertical-align: top
-
         &__name
           font-size: 14px
           color: #000
@@ -457,10 +429,10 @@
           line-height: 1
           letter-spacing: 0.8px
           transition: color 0.3s
-          margin-bottom: 18px
+          // margin-bottom: 18px
           width: 107px
-          // flex: 1 1 auto
 
+          // flex: 1 1 auto
           @media (max-width: 639px)
             flex: none
             margin-bottom: 0
@@ -468,7 +440,8 @@
   &__label
     position: relative
     margin-right: 10px
-    width: 78px
+    margin-bottom: 10px
+    min-width: 78px
 
     &:last-child
       margin-right: 0 !important
@@ -486,7 +459,7 @@
 
   &__choice
     text-align: center
-    height: 40px
+    // height: 40px
     display: flex
     flex-direction: column
     align-items: center
@@ -505,9 +478,31 @@
     text-align: center
     letter-spacing: 0.8
 
-.product-variety, .product-cut, .product-length
+  &__img
+    margin-top: 18px
 
-  
+    @media (max-width: 639px)
+      flex: 0 0 72px
+      width: 72px
+      max-width: 72px
+      order: -1
+      margin-right: 35px
+      margin-top: 0
+      transform: translateY(-6px)
+
+    @media (max-width: 767px)
+      width: 65px
+
+    @media (min-width: 768px)
+      width: 75px
+      height: 70px
+
+    @media (min-width: 1280px)
+      width: 107px
+      height: 100px
+
+    img
+      vertical-align: top
 
 .delivery-regions
   margin-bottom: 26px

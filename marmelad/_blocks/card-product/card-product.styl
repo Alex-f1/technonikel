@@ -1,5 +1,5 @@
 .card-product
-  .sorting
+  .property
     margin-bottom: 26px
 
     &__sort-type
@@ -7,7 +7,7 @@
 
     &__label
       input
-        &:checked ~ .sorting__choice
+        &:checked ~ .property__choice
           background-color: #D4F0BA
           border-color: transparent
           pointer-events: none
@@ -351,8 +351,118 @@
     margin-top: 0
     margin-bottom: 8px
 
-.product-variety, .product-cut, .product-length
+.property
   margin-bottom: 26px
+
+  &--pic
+    position: relative
+
+    @media (max-width: 1279px)
+      margin-bottom: 20px
+
+    @media (min-width: 1280px)
+      display: block
+      width: 550px
+      margin-right: 10px
+
+    & ^[0]
+      &__labels
+        display: flex
+        align-items: center
+
+        @media (max-width: 639px)
+          flex-direction: column
+          align-items: flex-start
+
+      &__label
+        width: 33.333%
+        position: relative
+        margin-right: 20px
+
+        &:last-child
+          margin-right: 0 !important
+
+        input
+          position: absolute
+          top: 0
+          left: 0
+          opacity: 0
+
+          &:checked ~ .property__choice
+            background-color: #D4F0BA
+            border-color: transparent
+            pointer-events: none
+
+        @media (max-width: 639px)
+          flex: none
+          width: 100%
+          max-width: 100%
+          margin-bottom: 18px
+          margin-right: 0
+
+        &:last-child
+          margin-bottom: 0
+
+      &__choice
+        text-align: center
+        height: 135px
+        display: flex
+        flex-direction: column
+        align-items: center
+        border: 1px solid #E2E2E2
+        border-radius: 10px
+        transition: background-color 0.3s, border-color 0.3s
+        padding: 17px
+        cursor: pointer
+
+        @media (min-width: 768px)
+          height: 150px
+          border-radius: 20px
+
+        @media (min-width: 1280px)
+          height: 180px
+
+        @media (max-width: 639px)
+          height: 60px
+          align-items: center
+          justify-content: center
+          flex-direction: row
+
+      &__img
+        @media (max-width: 639px)
+          flex: 0 0 72px
+          width: 72px
+          max-width: 72px
+          order: -1
+          margin-right: 35px
+          transform: translateY(-6px)
+
+        @media (max-width: 767px)
+          width: 65px
+
+        @media (min-width: 768px)
+          width: 75px
+
+        @media (min-width: 1280px)
+          width: 107px
+
+        img
+          vertical-align: top
+
+      &__name
+        font-size: 14px
+        color: #000
+        font-weight: 300
+        line-height: 1
+        letter-spacing: 0.8px
+        transition: color 0.3s
+        margin-bottom: 18px
+        width: 107px
+        flex: 1 1 auto
+
+        @media (max-width: 639px)
+          flex: none
+          margin-bottom: 0
 
   &__labels
     display: flex
@@ -372,7 +482,7 @@
       left: 0
       opacity: 0
 
-      &:checked ~ .product-variety__choice, &:checked ~ .product-cut__choice, &:checked ~ .product-length__choice
+      &:checked ~ .property__choice
         background-color: #D4F0BA
         border-color: transparent
         pointer-events: none
@@ -397,6 +507,10 @@
     line-height: 1.1
     text-align: center
     letter-spacing: 0.8
+
+.product-variety, .product-cut, .product-length
+
+  
 
 .delivery-regions
   margin-bottom: 26px

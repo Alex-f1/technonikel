@@ -1,0 +1,184 @@
+.advantages-block
+  overflow: hidden
+  padding-bottom: 30px
+
+  @media (min-width: 768px)
+    padding-bottom: 40px
+
+  @media (min-width: 1280px)
+    padding-bottom: 60px
+
+  &__title
+    font-size: 30px
+    font-weight: 700
+    line-height: 1
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 50px
+
+    @media (min-width: 375px)
+      font-size: 36px
+
+    @media (min-width: 768px)
+      font-size: 70px
+      margin-bottom: 60px
+
+    @media (min-width: 1280px)
+      font-size: 80px
+      margin-bottom: 128px
+
+  &__item
+    margin-bottom: 80px
+
+    &:last-child
+      margin-bottom: 0
+
+    &:nth-child(even)
+      & ^[0]
+        &__img
+          @media (min-width: 1025px)
+            order: 1
+            border-radius: 30px 0px 0px 30px
+            margin-right: -50px
+            margin-left: 25px
+
+          @media (min-width: 1280px)
+            margin-left: 45px
+
+          @media (min-width: 1600px)
+            margin-right: -150px
+            margin-left: 110px
+
+  &__body
+    display: flex
+    flex-direction: column
+
+    @media (min-width: 1024px)
+      align-items: center
+      flex-direction: row
+
+  &__img
+    background-color: #F1F1F1
+    overflow: hidden
+    border-radius: 10px
+
+    @media (max-width: 639px)
+      height: 260px
+
+    @media (max-width: 1023px)
+      margin-top: 30px
+      height: 400px
+      order: 1
+
+    @media (min-width: 1024px)
+      flex: 0 0 500px
+      width: 500px
+      max-width: 500px
+      height: 500px
+      margin-right: 25px
+      border-radius: 0px 30px 30px 0px
+      margin-left: -50px
+
+    @media (min-width: 1280px)
+      flex: 0 0 740px
+      width: 740px
+      max-width: 740px
+      height: 500px
+      margin-right: 45px
+
+    @media (min-width: 1600px)
+      flex: 0 0 960px
+      width: 960px
+      max-width: 960px
+      height: 700px
+      margin-right: 110px
+      margin-left: -150px
+
+    @media (min-width: 1921px)
+      border-radius: 30px
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      vertical-align: top
+
+  &__name
+    color: #000
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 20px
+    display: flex
+
+    @media (max-width: 639px)
+      flex-direction: column
+
+    @media (min-width: 640px)
+      align-items: center
+
+    h3
+      font-size: 30px
+      line-height: 1.2
+      letter-spacing: 0.8px
+      margin-top: 0
+      margin-bottom: 0
+      word-break: break-all
+
+      @media (max-width: 767px)
+        font-size: 24px
+
+      @media (max-width: 1279px)
+        font-size: 26px
+
+  &__icon
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-right: 40px
+    margin-bottom: 20px
+    width: 115px
+
+    @media (min-width: 640px)
+      flex: 0 0 115px
+      max-width: 115px
+      justify-content: center
+
+    @media (min-width: 1024px)
+      min-height: 145px
+
+    img
+      vertical-align: top
+
+    small
+      font-size: 11px
+      font-weight: 700
+      font-style: normal
+      line-height: 1.3
+      margin-top: 16px
+
+  &__text
+    @media (min-width: 1280px)
+      padding-left: 155px
+
+    p
+      font-size: 16px
+      color: #000
+      font-weight: 300
+      line-height: 1.5
+      letter-spacing: 0.8px
+      margin-top: 0
+      margin-bottom: 25px
+
+      @media (max-width: 767px)
+        margin-bottom: 15px
+
+      &:last-child
+        margin-bottom: 0
+
+    a
+      color: #4fa600
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline

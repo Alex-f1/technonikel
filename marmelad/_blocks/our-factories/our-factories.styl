@@ -11,6 +11,23 @@
     padding-top: 164px
     padding-bottom: 200px
 
+  &--simple
+    padding-top: 50px !important
+
+    @media (max-width: 479px)
+      height: 600px
+
+    & ^[0]
+      &__map
+        @media (min-width: 320px)
+          margin-bottom: 0 !important
+
+        @media (min-width: 1440px)
+          margin-top: -110px
+
+        @media (max-width: 479px)
+          margin-bottom: 0 !important
+
   &__inner
     position: relative
 
@@ -22,6 +39,15 @@
 
     @media (min-width: 1280px)
       margin-bottom: 55px
+
+    strong
+      font-size: 30px
+      color: #000
+      font-weight: 700
+      line-height: 1.1
+
+      @media (min-width: 1024px)
+        font-size: 50px
 
   &__title
     font-size: 36px
@@ -144,9 +170,27 @@
     z-index: 3
     transition: background 0.3s
 
+    span
+      font-size: 16px
+      color: #FFF
+      font-weight: 500
+      font-style: normal
+      line-height: 1.2
+      text-align: center
+      background-color: #4FA600
+      border-radius: 5px
+      padding: 4px 10px
+      position: absolute
+      bottom: -5px
+      right: -100%
+      min-width: 130px
+
+      @media (max-width: 479px)
+        right: -35%
+        bottom: -35px
+
     &._is-active-location
       background-image: url("data:image/svg+xml,%3Csvg width='98' height='130' viewBox='0 0 98 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='48.9836' cy='121.412' rx='10.4282' ry='8.11079' fill='%2395DB00'/%3E%3Crect x='46.6662' y='64.6357' width='4.63474' height='57.9342' rx='2.31737' fill='%2395DB00'/%3E%3Cg filter='url(%23filter0_d_328_1164)'%3E%3Ccircle cx='48.9836' cy='39.1448' r='34.7605' fill='url(%23paint0_linear_328_1164)'/%3E%3Ccircle cx='48.9836' cy='39.1448' r='36.7605' stroke='white' stroke-width='4'/%3E%3C/g%3E%3Cpath d='M42.7194 44.4111V35.379H39.3122V33.0113H50.871L56.3544 40.5465V30.7761L63.0483 24.082H41.032L35.0793 30.0342V52.0504L35.0799 52.051V52.0504L42.7194 44.4111Z' fill='white'/%3E%3Cpath d='M58.6507 31.5873V44.675H56.4735L50.99 37.1399V44.675H48.4553V35.1399H45.0494V45.1883L36.6349 53.6029H36.6331L36.6349 53.6047L58.6507 53.6029L64.6021 47.652V25.6357L58.6507 31.5873Z' fill='white'/%3E%3Cdefs%3E%3Cfilter id='filter0_d_328_1164' x='0.223022' y='0.384277' width='97.5211' height='112.521' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='25'/%3E%3CfeGaussianBlur stdDeviation='5'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_328_1164'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_328_1164' result='shape'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_328_1164' x1='48.9836' y1='4.38428' x2='48.9836' y2='73.9054' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2395DB00'/%3E%3Cstop offset='1' stop-color='%234FA600'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
-      
 
   &__info
     font-size: 36px

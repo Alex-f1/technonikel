@@ -1,0 +1,191 @@
+.our-factories-list
+  padding-top: 50px
+  padding-bottom: 50px
+  overflow-x: hidden
+
+  @media (min-width: 1280px)
+    padding-top: 100px
+
+  &__item
+    margin-bottom: 80px
+
+    &:last-child
+      margin-bottom: 0
+
+    &:nth-child(even)
+      & ^[0]
+        &__img
+          @media (min-width: 1025px)
+            order: 1
+            border-radius: 30px 0px 0px 30px
+            margin-right: -50px
+            margin-left: 25px
+
+          @media (min-width: 1280px)
+            margin-left: 45px
+
+          @media (min-width: 1600px)
+            margin-right: -150px
+            margin-left: 110px
+
+  &__body
+    display: flex
+    flex-direction: column
+
+    @media (min-width: 1024px)
+      align-items: center
+      flex-direction: row
+
+  &__img
+    background-color: #F1F1F1
+    overflow: hidden
+    border-radius: 10px
+
+    @media (max-width: 639px)
+      height: 260px
+
+    @media (max-width: 1023px)
+      margin-top: 30px
+      height: 400px
+      order: 1
+
+    @media (min-width: 1024px)
+      flex: 0 0 500px
+      width: 500px
+      max-width: 500px
+      height: 500px
+      margin-right: 25px
+      border-radius: 0px 30px 30px 0px
+      margin-left: -50px
+
+    @media (min-width: 1280px)
+      flex: 0 0 740px
+      width: 740px
+      max-width: 740px
+      height: 500px
+      margin-right: 45px
+
+    @media (min-width: 1600px)
+      flex: 0 0 960px
+      width: 960px
+      max-width: 960px
+      height: 700px
+      margin-right: 110px
+      margin-left: -150px
+
+    @media (min-width: 1921px)
+      border-radius: 30px
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      vertical-align: top
+
+    iframe
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__content
+    color: #000
+    padding: 10px 20px
+    position: relative
+
+    p
+      font-size: 18px
+      font-weight: 300
+      line-height: 1.2
+      margin-top: 0
+      margin-bottom: 0
+
+      @media (min-width: 768px)
+        font-size: 20px
+
+  &__head
+    margin-bottom: 30px
+
+  &__name
+    font-size: 30px
+    font-weight: 700
+    line-height: 1.2
+    margin-top: 0
+    margin-bottom: 10px
+
+    @media (min-width: 768px)
+      font-size: 40px
+
+    @media (min-width: 1440px)
+      font-size: 50px
+
+  &__list
+    list-style: none
+    padding-left: 0
+    margin-top: 0
+
+    @media (min-width: 1440px)
+      margin-bottom: 50px
+
+    li
+      font-size: 16px
+      font-weight: 300
+      line-height: 1.2
+      padding-left: 30px
+      position: relative
+      margin-bottom: 20px
+
+      @media (min-width: 768px)
+        font-size: 18px
+
+      @media (min-width: 1440px)
+        margin-bottom: 25px
+
+      &:before
+        content: ''
+        position: absolute
+        top: 6px
+        left: 0
+        width: 8px
+        height: 9px
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='9' viewBox='0 0 8 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.86145 4.5596L0.307467 8.66182L0.307467 0.45737L7.86145 4.5596Z' fill='%234FA600'/%3E%3C/svg%3E%0A")
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: contain
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    border-top: 1px solid #E2E2E2
+    padding-top: 20px
+
+    @media (min-width: 768px)
+      padding-top: 35px
+
+    @media (min-width: 1440px)
+      padding-top: 50px
+
+    a, span
+      font-size: 16px
+      color: #000
+      font-weight: 300
+      line-height: 1.1
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+
+      @media (min-width: 1440px)
+        font-size: 18px
+        margin-bottom: 25px
+
+      &:last-child
+        margin-bottom: 0
+
+      i
+        flex: 0 0 14px
+        width: 14px
+        max-width: 14px
+        height: 16px
+        margin-right: 16px
+
+    a
+      text-decoration: none

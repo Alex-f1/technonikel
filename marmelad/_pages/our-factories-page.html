@@ -1,0 +1,67 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Наши заводы
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+]
+body:
+	classes:
+---
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+ 
+	<div block="inner-top" mods="pic">
+		<div elem="section" style="background-image: url('img/inner-top-bg.jpg');">
+			<div elem="inner" class="contain">
+				{% include "bread-crumbs.html" %}
+				<h1>Наши заводы</h1>
+        <p>предприятия деревообработки технониколь</p>
+			</div>
+		</div>
+	</div><!-- inner-top -->
+
+  {% include "our-factories-list.html" %}
+
+  <div block="our-factories" mods="simple">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        <div elem="head">
+          <strong>География производства</strong>
+        </div>
+        <div elem="container">
+          <div elem="map">
+            <div elem="img"><img src="img/map-pic.png" alt=""></div>
+            <i elem="icon-location" class="_is-active-location" style="bottom: 320px; left: 410px;">
+              <span>ДОК-Тагил</span>
+            </i>
+            <i elem="icon-location" class="_is-active-location"  style="bottom: 150px; left: 780px;">
+              <span>Премьер-Лес</span>
+            </i>
+            <i elem="icon-location" class="_is-active-location"  style="bottom: 230px; left: 850px;">
+              <span>ЛесСервис</span>
+            </i>
+          </div>
+          <div elem="info">
+            <strong>240 000<sup>м³</sup></strong>
+            <span>в год</span>
+            <small>
+              Объём лесозаготовки <br>
+              ТЕХНОНИКОЛЬ
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- our-factories -->
+
+{% endblock %}

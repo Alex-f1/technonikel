@@ -10,14 +10,14 @@ const cardOurFactoriesSlider = new Swiper(".js-card-our-factories-slider", {
 function ourFactoriesInfo() {
   const buttonTab = document.querySelectorAll(".js-button-tab");
   const ourFactoriesIconLocation = document.querySelectorAll(".our-factories__icon-location");
-  const ourFactoriesCards = document.querySelector(".js-our-factories-cards");
+  const ourFactoriesCards = document.querySelectorAll(".js-our-factories-cards");
   const buttonClose = document.querySelector(".js-button-close");
 
 
   for (let i = 0; i < buttonTab.length; i++) {
     buttonTab[i].addEventListener("click", (event) => {
 
-      ourFactoriesCards.classList.add("_is-show")
+      
 
       let buttonTabChildren = event.target.parentElement.children;
       for (let b = 0; b < buttonTabChildren.length; b++) {
@@ -27,13 +27,17 @@ function ourFactoriesInfo() {
       buttonTab[i].classList.add("_is-active");
 
       let tabContentChildren = event.target.parentElement.nextElementSibling.children;
-
       for (let l = 0; l < tabContentChildren.length; l++) {
         tabContentChildren[l].classList.remove("_is-active-location");
       }
 
-      ourFactoriesIconLocation[i].classList.add("_is-active-location");
+      let tabOurFactoriesCards = event.target.offsetParent.offsetParent.offsetParent.querySelectorAll(".js-our-factories-cards");
+      for (let f = 0; f < tabOurFactoriesCards.length; f++) {
+        tabOurFactoriesCards[f].classList.remove("_is-show");
+      }
 
+      ourFactoriesIconLocation[i].classList.add("_is-active-location");
+      ourFactoriesCards[i].classList.add("_is-show")
     });
   }
 

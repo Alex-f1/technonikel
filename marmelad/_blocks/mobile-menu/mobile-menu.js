@@ -27,10 +27,11 @@ function mobileMenu() {
       element.classList.value = "sub-menu";
       element.appendChild(createSubMenuTrigger);
       element.children[2].classList.value = "sub-menu-trigger";
-      let subMenuTrigger = element.children[2];
+      let subMenuTrigger = element.children[0];
 
       subMenuTrigger.addEventListener("click", function (event) {
-        event.target.parentNode.classList.add("_is-active");
+        event.preventDefault();
+        event.currentTarget.parentNode.classList.add("_is-active");
         element.parentElement.classList.add("_is-triggered");
         element.parentElement.offsetParent.classList.add("_is-triggered");
         const getText = event.target.closest('li').children[0].innerText;

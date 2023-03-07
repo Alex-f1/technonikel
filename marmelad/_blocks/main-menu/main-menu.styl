@@ -75,6 +75,9 @@
     @media (min-width: 1600px)
       padding-top: 130px
 
+    @media (max-height: 959px)
+      padding-top 0  
+
   &__link
     font-size: 22px
     font-weight: 300
@@ -208,7 +211,10 @@
           width: 25%
           margin-top: 100px
 
-        > a
+        @media (max-height: 959px)   
+          margin-top 50px   
+
+        > a, .main-menu-title
           font-size: 20px
           font-weight: 700
           text-transform: uppercase
@@ -228,14 +234,24 @@
               margin-bottom: 40px
               height: 87px
 
+            @media (max-height: 959px)   
+                width 78px
+                height 78px
+
             img
               vertical-align: top
 
         ul
           padding-top: 30px
 
+          @media (max-height: 959px)
+            padding-top 15px
+
           li
             margin-bottom: 15px
+
+            @media (max-height: 959px)   
+              margin-bottom 5px
 
             &:last-child
               margin-bottom: 0

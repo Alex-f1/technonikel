@@ -26,3 +26,23 @@ if (window.NodeList && !NodeList.prototype.forEach) {
  * ========================================================================== */
 
 //=require ../_blocks/**/*.js
+
+document.querySelector(".js-link-projects")
+  .addEventListener("click", function (event) {
+    event.currentTarget.children[1].classList.toggle("_is-show");
+    
+});
+
+document.addEventListener('click', (event) => {
+  const withinBoundaries = event
+    .composedPath()
+    .includes(document.querySelector(".js-link-projects"));
+
+  if (!withinBoundaries) {
+    document.querySelector(".js-link-projects ul")
+      .classList.remove("_is-show");
+  }
+})
+
+
+

@@ -263,6 +263,8 @@
         background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11.3496L6 6.32219L1 1.29476' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
 
   &__item
+    text-decoration: none
+
     &._is-active
       .calculator-product-card
         &__body
@@ -277,6 +279,7 @@
           color: #4fa600
 
 .calculator-product-card
+  text-decoration: none
   display: flex
   cursor: pointer
   height: 400px
@@ -367,9 +370,11 @@
       font-weight: 300
       line-height: 1.1
       letter-spacing: 0.8px
+      margin-bottom: 5px
 
   &__name
     font-size: 20px
+    color: #000
     font-weight: 700
     line-height: 1
     text-transform: uppercase

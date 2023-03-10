@@ -28,6 +28,20 @@
     @media (min-height: 700px)
       position: sticky
 
+    @media (max-width: 1023px)
+      position: sticky
+      height: 68px
+      top: 15px
+      overflow: hidden
+      cursor: pointer
+
+    &._is-show
+      height: 350px
+
+      & ^[0]
+        &__nav
+          padding-bottom: 50px
+
     h3
       font-size: 20px
       color: #000
@@ -54,6 +68,10 @@
 
           &:hover
             color: #4fa600
+
+  &__nav
+    overflow-y: auto
+    height: 100%
 
   &__content
     br

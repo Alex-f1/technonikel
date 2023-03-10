@@ -1,0 +1,34 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Виды деревянной отделки современных фасадов
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+	{"title": Статьи},
+]
+body:
+	classes: inner
+---
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+ 
+	<div block="inner-top">
+		<div elem="section">
+			<div elem="inner" class="contain">
+				{% include "bread-crumbs.html" %}
+			</div>
+		</div>
+	</div><!-- inner-top -->
+
+  {% include "content-block.html" %}
+
+{% endblock %}

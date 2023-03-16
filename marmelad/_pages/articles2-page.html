@@ -1,0 +1,138 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Статьи
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+]
+body:
+	classes: inner
+---
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+ 
+	<div block="inner-top">
+		<div elem="section">
+			<div elem="inner" class="contain">
+				{% include "bread-crumbs.html" %}
+        <h1>Статьи</h1>
+			</div>
+		</div>
+	</div><!-- inner-top -->
+
+  <div block="articles-list" mods="horizontal">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        <div elem="items">
+          <div elem="item">
+            <div block="article-thumb">
+              <div elem="body">
+                <div elem="top">
+                  <a elem="name" href="#">
+                    Виды деревянной отделки современных фасадов
+                  </a>
+                  <div elem="text">
+                    Какие бы новомодные материалы для отделки фасадов не придумывали, древесина неизменно остаётся
+                    классикой. Деревянный
+                    фасад — это экологично, красиво и надёжно.
+                  </div>
+                </div>
+                <a elem="img" href="#"><img src="img/article-thumb-img.jpg" alt=""></a>
+              </div>
+            </div><!-- article-thumb -->
+          </div>
+          <div elem="item">
+            <div block="article-thumb">
+              <div elem="body">
+                <div elem="top">
+                  <a elem="name" href="#">
+                    Влияние влажности на древесину
+                  </a>
+                  <div elem="text">
+                    Все что нужно знать покупателю о влажности древесины
+                  </div>
+                </div>
+                <a elem="img" href="#"><img src="img/article-thumb-img2.jpg" alt=""></a>
+              </div>
+            </div><!-- article-thumb -->
+          </div>
+          <div elem="item">
+            <div block="article-thumb">
+              <div elem="body">
+                <div elem="top">
+                  <a elem="name" href="#">
+                    Как подобрать древесину для
+                    строительства
+                  </a>
+                  <div elem="text">
+                    Чтобы подобрать древесину для строительства надо знать из каких пород дерева делают пиломатериалы,
+                    разбираться в
+                    свойствах и пороках древесины, понимать какие материалы для каких строительных конструкций подходят
+                  </div>
+                </div>
+                <a elem="img" href="#"><img src="img/article-thumb-img3.jpg" alt=""></a>
+              </div>
+            </div><!-- article-thumb -->
+          </div>
+          <div elem="item">
+            <div block="article-thumb">
+              <div elem="body">
+                <div elem="top">
+                  <a elem="name" href="#">
+                    Разбираемся в сортах древесины — погонажные изделия
+                  </a>
+                  <div elem="text">
+                    Как выглядят пороки древесины на погонажных изделиях и как распределяются по сортам
+                  </div>
+                </div>
+                <a elem="img" href="#"><img src="img/article-thumb-img4.jpg" alt=""></a>
+              </div>
+            </div><!-- article-thumb -->
+          </div>
+          <div elem="item">
+            <div block="article-thumb">
+              <div elem="body">
+                <div elem="top">
+                  <a elem="name" href="#">
+                    Разбираемся в сортах древесины — рейка, брусок, доска
+                  </a>
+                  <div elem="text">
+                    Как выглядят пороки древесины, и как строганые и нестроганые рейка, брусок, доска отличаются по сортам
+                  </div>
+                </div>
+                <a elem="img" href="#"><img src="img/article-thumb-img5.jpg" alt=""></a>
+              </div>
+            </div><!-- article-thumb -->
+          </div>
+          <div elem="item">
+            <div block="article-thumb">
+              <div elem="body">
+                <div elem="top">
+                  <a elem="name" href="#">
+                    Свойства хвойных пород древесины
+                  </a>
+                  <div elem="text">
+                    Технониколь делает пиломатериалы из четырех пород дерева: сосна ангарская, лиственница сибирская, ель
+                    сибирская, кедр
+                    сибирский. Расскажем о свойствах и отличиях
+                  </div>
+                </div>
+                <a elem="img" href="#"><img src="img/article-thumb-img6.jpg" alt=""></a>
+              </div>
+            </div><!-- article-thumb -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- articles-list -->
+
+{% endblock %}

@@ -391,7 +391,7 @@
         @media (max-width: 767px)
           font-size: 16px
 
-  &__percentage-table
+  &__percentage-table, &__bordered-table
     margin-top: 20px
     margin-bottom: 20px
 
@@ -421,6 +421,22 @@
 
         @media (min-width: 1280px)
           font-size: 20px
+
+  &__bordered-table
+    margin-bottom: 50px
+
+    table
+      border-collapse: collapse
+
+      tr
+        td
+          padding-top: 15px
+          border-top: 1px solid #C9C9C9
+          vertical-align: top
+
+        &:last-child
+          td
+            border-bottom: 1px solid #C9C9C9
 
   &__circle-img
     display: flex
@@ -501,3 +517,30 @@
     display: flex
     flex-wrap: wrap
     margin-left: -60px
+
+  &__tree-types
+    padding-top: 40px
+
+  &__tree-types-items
+    display: flex
+    flex-wrap: wrap
+    margin-left: -20px
+
+    & ^[0]
+      &__img
+        width: 25%
+        display: flex
+        flex-direction: column
+        padding-left: 20px
+
+        @media (max-width: 1279px)
+          width: 50%
+
+        @media (max-width: 767px)
+          width: 100%
+
+        strong
+          flex: 1 1 auto
+
+        div
+          height: 185px

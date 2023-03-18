@@ -7,18 +7,18 @@ function mainMenu(e) {
   const mainMenu = document.querySelector(".main-menu");
   const topPanel = document.querySelector(".top-panel");
 
-  linkCatalog.addEventListener("click", function (event) {
+  /* linkCatalog.addEventListener("click", function (event) {
     event.currentTarget.classList.toggle("_is-active");
     menuCatalog.classList.toggle("_is-show-menu-catalog");
-  });
+  }); */
 
   buttonBurger.addEventListener("click", function (event) {
     event.currentTarget.classList.toggle("_is-active");
     body.classList.toggle("_is-scroll-lock");
     mainMenu.classList.toggle("_is-show-main-menu");
     topPanel.classList.toggle("_is-opened-menu");
-    linkCatalog.classList.remove("_is-active");
-    menuCatalog.classList.remove("_is-show-menu-catalog");
+    menuCatalog.classList.toggle("_is-show-menu-catalog");
+    // linkCatalog.classList.remove("_is-active");
   });
 
 }

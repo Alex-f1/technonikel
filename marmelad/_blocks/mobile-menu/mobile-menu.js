@@ -4,6 +4,7 @@ function mobileMenu() {
   const body = document.querySelector("body");
   const topPanel = document.querySelector(".top-panel");
   const mobileMenu = document.querySelector(".mobile-menu");
+  const mobileMenuNav = document.querySelector(".mobile-menu__nav");
   const mobileMenuHead = document.querySelector(".mobile-menu__head");
   const mobileMenuName = document.querySelector(".mobile-menu__name");
   const mobileMenuBack = document.querySelector(".mobile-menu__back");
@@ -13,12 +14,7 @@ function mobileMenu() {
   const buttonCatalog = document.querySelector(".js-button-catalog");
   const buttonMenu = document.querySelector(".js-button-menu");
 
-  buttonBurger.addEventListener("click", function (event) {
-    event.currentTarget.classList.toggle("_is-active");
-    body.classList.toggle("_is-scroll-lock");
-    mobileMenu.classList.toggle("_is-show");
-    topPanel.classList.toggle("_is-opened-menu");
-  });
+  
 
 
   mobileMenuCatalogItem.forEach(function (element, index) {
@@ -51,15 +47,25 @@ function mobileMenu() {
   });
 
   buttonCatalog.addEventListener("click", function(event) {
+    event.preventDefault();
     event.currentTarget.classList.add("_is-active");
+    mobileMenuNav.classList.add("_is-active");
+    mobileMenu.classList.add("_is-active");
     buttonMenu.classList.remove("_is-active");
     mobileMenuMenu.classList.remove("_is-show");
     mobileMenuCatalog.classList.remove("_is-show-menu");
     mobileMenuHead.classList.remove("_is-show-menu");
+    buttonBurger.classList.add("_is-active");
+    body.classList.add("_is-scroll-lock");
+    mobileMenu.classList.add("_is-show");
+    topPanel.classList.add("_is-opened-menu");
   });
 
   buttonMenu.addEventListener("click", function(event) {
+    event.preventDefault();
     event.currentTarget.classList.add("_is-active");
+    mobileMenuNav.classList.add("_is-active");
+    mobileMenu.classList.add("_is-active");
     buttonCatalog.classList.remove("_is-active");
     mobileMenuMenu.classList.add("_is-show");
     mobileMenuCatalog.classList.add("_is-show-menu");
@@ -70,6 +76,24 @@ function mobileMenu() {
       element.parentElement.classList.remove("_is-triggered");
       element.parentElement.offsetParent.classList.remove("_is-triggered");
     });
+    buttonBurger.classList.add("_is-active");
+    body.classList.add("_is-scroll-lock");
+    mobileMenu.classList.add("_is-show");
+    topPanel.classList.add("_is-opened-menu");
+  });
+
+  buttonBurger.addEventListener("click", function (event) {
+    event.currentTarget.classList.remove("_is-active");
+    body.classList.remove("_is-scroll-lock");
+    mobileMenu.classList.remove("_is-active");
+    mobileMenu.classList.remove("_is-triggered");
+    mobileMenuCatalog.classList.remove("_is-triggered");
+    topPanel.classList.remove("_is-opened-menu");
+    buttonCatalog.classList.remove("_is-active");
+    buttonMenu.classList.remove("_is-active");
+    mobileMenuNav.classList.remove("_is-active");
+    mobileMenu.classList.remove("_is-active");
+    mobileMenuHead.classList.remove("_is-show-menu");
   });
 
 }

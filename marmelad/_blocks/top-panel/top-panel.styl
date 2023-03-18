@@ -7,6 +7,8 @@
   overflow: hidden
 
   &._is-opened-menu
+    position: fixed
+
     .logo
       &__img
         img
@@ -94,7 +96,11 @@
     cursor: pointer
     display: block
     z-index: 52
-    transition: background-color .3s
+    transition: background-color 0.3s, opacity 0.3s
+
+    @media (max-width: 767px)
+      opacity: 0
+      visibility: hidden
 
     @media (min-width: 1600px)
       width: 100px
@@ -114,6 +120,9 @@
       transform: translate(-50%, -50%)
       display: block
       transition: margin-left 0.3s, opacity 0.3s, ease 0.3s
+
+      @media (max-width: 767px)
+        display: none !important
 
       @media (min-width: 1600px)
         width: 40px
@@ -165,6 +174,9 @@
         height: 36px
 
     &._is-active
+      opacity: 1
+      visibility: visible
+
       span
         margin-left: 10px
         opacity: 0

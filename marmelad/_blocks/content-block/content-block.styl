@@ -253,6 +253,10 @@
         background-size: contain
         margin-left: 10px
 
+    ol
+      padding-left: 20px
+      margin-bottom: 50px
+
   &__main
     margin-bottom: 30px
 
@@ -544,3 +548,67 @@
 
         div
           height: 185px
+
+  &__info-wood
+    padding-top: 80px
+    border-top: 1px solid #C9C9C9
+    margin-bottom: 75px
+
+  &__info-wood-top
+    display: flex
+    margin-bottom: 40px
+
+    @media (max-width: 639px)
+      display: block
+
+  &__info-wood-text
+    flex: 1 1 auto
+
+  &__info-wood-img
+    flex: 0 0 278px
+    width: 278px
+    max-width: 278px
+    min-height: 75px
+    // height: 238px
+    border-radius: 30px
+    overflow: hidden
+    align-self: flex-start
+    margin-bottom: 20px
+
+    @media (min-width: 768px)
+      margin-left: 50px
+      margin-bottom: 0
+
+    @media (min-width: 1280px)
+      margin-left: 100px
+
+    p
+      font-size: 16px
+      font-weight: 300
+      line-height: 1
+      text-align: center
+      letter-spacing: 0.8px
+      margin-bottom: 20px
+
+    img
+      vertical-align: top
+      display: block
+
+  &__info-wood-table
+    overflow-x: auto
+
+    table
+      width: 100%
+
+      @media (max-width: 480px)
+        width: 600px
+
+      tr
+        td
+          width: 25%
+          vertical-align: top
+          padding-right: 20px
+
+          p, strong
+            @media (max-width: 767px)
+              font-size: 14px

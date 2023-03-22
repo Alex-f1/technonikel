@@ -22,12 +22,6 @@ if (document.querySelectorAll(".js-content-block-sidebar").length) {
       subMenuTrigger.addEventListener("click", function (event) {
         event.preventDefault();
         event.currentTarget.parentNode.classList.toggle("_is-active");
-        // event.target.closest(".js-content-block-sidebar").classList.add("_is-show")
-        if (sidebarBlock.offsetHeight > 500) {
-          sidebarBlock.style.position = "static"
-        } else {
-          sidebarBlock.style.position =  "sticky"
-        }
       });
     }
   });

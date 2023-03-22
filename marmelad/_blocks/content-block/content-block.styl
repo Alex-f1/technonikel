@@ -14,6 +14,7 @@
     top: 25px
     align-self: flex-start
     margin-bottom: 30px
+    overflow: hidden
 
     @media (min-width: 1024px)
       margin-right: 30px
@@ -32,7 +33,6 @@
       position: sticky
       height: 68px
       top: 15px
-      overflow: hidden
       cursor: pointer
 
     &._is-show
@@ -61,6 +61,9 @@
       list-style: none
       padding-left: 0
       margin: 0
+
+      @media (min-width: 1024px)
+        max-height: 750px
 
       li
         margin-bottom: 15px
@@ -437,6 +440,8 @@
           padding-top: 15px
           border-top: 1px solid #C9C9C9
           vertical-align: top
+          width: 20%
+          padding-right: 20px
 
         &:last-child
           td
@@ -478,23 +483,24 @@
 
     & ^[0]
       &__img
-        max-width: 250px
+        width: auto !important
+        max-width: none
 
         @media (min-width: 768px)
-          flex: 0 0 490px
-          width: 490px
-          max-width: 490px
-
-        @media (min-width: 1280px)
-          margin-right: 25px
+          margin-right: 50px
 
         @media (min-width: 1600px)
           margin-right: 155px
 
         div
-          height: 100%
+          // height: 100%
+          height: auto
           background-color: transparent
           border-radius: 0
+
+          img
+            width: auto
+            object-fit: contain
 
   &__scheme-mini
     margin-bottom: 30px
@@ -612,3 +618,110 @@
           p, strong
             @media (max-width: 767px)
               font-size: 14px
+
+  &__img-wood
+    display: flex
+    margin-bottom: 40px
+
+    @media (max-width: 479px)
+      display: block
+
+    figure
+      margin: 0
+      text-align: center
+
+      figcaption
+        margin-top: 5px
+
+      img
+        vertical-align: top
+
+    & ^[0]
+      &__img
+        margin-right: 100px
+
+        @media (max-width: 1279px)
+          margin-right: 25px
+
+        @media (max-width: 479px)
+          margin-bottom: 30px
+          margin-right: 0
+
+        div
+          height: 510px
+
+          @media (max-width: 1279px)
+            height: 460px
+
+          @media (max-width: 767px)
+            height: 360px
+
+          @media (max-width: 479px)
+            height: 240px
+
+  &__group-img
+    display: flex
+    flex-wrap: wrap
+    margin-left: -20px
+
+    & ^[0]
+      &__img
+        width: 25%
+        padding-left: 20px
+        margin-bottom: 20px
+
+        @media (max-width: 1279px)
+          width: 50%
+
+        @media (max-width: 479px)
+          width: 100%
+
+        div
+          height: 190px
+
+  &__color-table
+    margin-left: -20px
+    margin-bottom: 80px
+    overflow-x: auto
+
+    @media (max-width: 767px)
+      margin-bottom: 40px
+
+    &--type2
+      table
+        tr
+          td
+            width: 25% !important
+
+    table
+      width: 100%
+      border-spacing: 18px 20px
+
+      tr
+        td
+          vertical-align: top
+          border: 2px solid #666
+          border-radius: 10px
+          padding: 20px
+          width: 33.333%
+
+          p
+            font-size: 16px
+
+            &:last-child
+              margin-bottom: 0
+
+          &.border-color-yellow
+            border-color: #F1C131
+
+          &.border-color-brown
+            border-color: #B35C02
+
+          &.border-color-blue
+            border-color: #3D85C6
+
+          &.border-color-green
+            border-color: #6AA84F
+
+        &:last-child
+          text-align: center

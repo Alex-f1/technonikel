@@ -18,6 +18,11 @@
           &.logo-dark
             display: block !important
 
+    & ^[0]
+      &__info
+        opacity: 0
+        visibility: hidden
+
   &__section
     // max-width: 1920px
     width: 100%
@@ -30,8 +35,8 @@
     display: flex
     align-items: center
     padding-left: 20px
-    position relative
-    z-index 101
+    position: relative
+    z-index: 101
 
     @media (min-width: 768px)
       padding-top: 10px
@@ -45,6 +50,7 @@
 
   &__info
     margin-left: auto
+    transition: opacity 0.3s
 
   &__buttons
     display: none
